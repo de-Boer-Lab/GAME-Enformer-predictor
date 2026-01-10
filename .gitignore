@@ -1,0 +1,12 @@
+# Ignore the container since it is huge
+*.sif
+
+# macOS system files
+*.DS_Store
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Large model files
+src/script_and_utils/trained_model/variables/variables.data-00000-of-00001
