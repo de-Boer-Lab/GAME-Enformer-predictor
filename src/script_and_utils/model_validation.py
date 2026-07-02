@@ -16,11 +16,11 @@ def model_specific_payload_validation(payload):
         print("Enformer cannot handle 'interaction_matrix' readout type. Exiting gracefully!")
         errors['prediction_request_failed'].append("Enformer cannot process 'interaction_matrix' readout type.")
 
-    # --- MODEL SPECIFIC: Ensure this Enformer Predictor only supports homo_sapiens ---
+    # --- MODEL SPECIFIC: Ensure this Enformer Predictor only supports homo_sapiens and mus_musculus ---
     for task in payload['prediction_tasks']:
-        if task.get('species', '').lower() != "homo_sapiens":
+        if task.get('species', '').lower() not in ["homo_sapiens", "mus_musculus"]:
             errors['prediction_request_failed'].append(
-                f"This predictor only supports species: homo_sapiens. Received '{task.get('species')}' for task '{task.get('name')}'."
+                f"This predictor only supports species: ['homo_sapiens', 'mus_musculus']. Received '{task.get('species')}' for task '{task.get('name')}'."
             )
         task_type = task.get('type', '').lower()
         if task_type.startswith("conformation_") or task_type.startswith("expression_splicing"):

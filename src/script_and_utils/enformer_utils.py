@@ -13,16 +13,17 @@ def slice_prediction_tracks(full_track, original_seq_len, model_input_len, bin_s
     N-padding predictions removed.
     This function is for predictions that are shorter than the prediction window and are centered in the receptive field.
     Args:
-        full_track (np.array): The 3D full-length prediction array from the model (1, 16352, num_tracks)
+        full_track (np.array): The 3D full-length prediction array from the model (1, 896, num_tracks)
         original_seq_len (int): The length of original, unpadded sequence.
         model_input_len (int): The length of the sequence required by the model
                                after padding/ trimming.
         bin_size (int): The size of each prediction bin in base pairs.
-        buffer_bp (int): The total number of base pairs cropped by the model. . 
+        buffer_bp (int): The total number of base pairs cropped by the model. 
         
     Returns:
         sliced_track (np.array): The sliced 3D prediction track with bins with just
                                  N-padding removed.
+        N_in_left_bin (int): Number of N-padding in the leftmost bin with sequence.
         
     """
 
@@ -39,15 +40,74 @@ def slice_prediction_tracks(full_track, original_seq_len, model_input_len, bin_s
     start_bin_index = left_padding_after_buffer // bin_size
     end_bin_index = math.ceil((left_padding_after_buffer + original_seq_len)/bin_size)
 
-    number_bins = end_bin_index - start_bin_index
-    total_bases = number_bins*bin_size
-    N_in_bins = total_bases - original_seq_len
-    N_in_left_bin = N_in_bins//2
-    N_in_right_bin = N_in_bins - N_in_left_bin
+    N_in_left_bin = left_padding_after_buffer - (start_bin_index * bin_size) # This calculates the actual number of N bases in the leftmost bin by determining how many bases of padding are left after accounting for the full bins that come before it. This is more accurate than the original logic, especially when the padding does not perfectly align with the bin boundaries.
+    
 
     sliced_track = full_track[:, start_bin_index:end_bin_index, :]
 
     return sliced_track, N_in_left_bin
+
+
+def slice_prediction_tracks_for_range(full_track, original_seq_len, range_start, range_end, model_input_len, bin_size, buffer_bp=320*2*128):
+    """
+    Slice prediction track to keep only bins corresponding to the prediction range.
+    
+    Args:
+        full_track (np.array): The 3D full-length prediction array (1, 896, num_tracks)
+        original_seq_len (int): The length of original, unpadded sequence.
+        range_start (int): Start position of prediction range in the subsetted sequence
+        range_end (int): End position of prediction range in the subsetted sequence
+        model_input_len (int): The length of the sequence required by the model
+                        after padding/ trimming.
+        bin_size (int): The size of each prediction bin in base pairs (128)
+        buffer_bp (int): The total number of base pairs cropped by the model
+    
+    Returns:
+        sliced_track (np.array): Prediction track for only the requested range
+        extraBases_in_left_bin (int): Number of bases in the leftmost bin that are outside the requested range (i.e. bases that are in the bin but not in the range)
+    """
+    # Calculate the total padding
+    total_padding = model_input_len - original_seq_len # 196608 - 257 = 196351
+
+    left_buffer = buffer_bp//2 # 40960
+
+    # Sequence is centred but padding is right-biased (Extra N on the right, if total padding is odd)
+    left_padding = total_padding // 2 # 196351 // 2 = 98175
+    # left_padding_after_buffer = max(0, left_padding - left_buffer) # 98175 - 40960 = 57215
+
+    #Adjust range coordinates with the padding
+    range_start_padded = range_start + left_padding # NOTE: shouldn't this be left_padding_after_buffer? # 
+    range_end_padded = range_end + left_padding # NOTE: shouldn't this be left_padding_after_buffer? It doesn't matter since is is only called for certain situations but will use that in Borzoi
+
+    #Account for model's left buffer which isn't included in the range calculation
+    range_start_after_buffer = range_start_padded - left_buffer # NOTE: 
+    range_end_after_buffer = range_end_padded - left_buffer
+    # range_start_after_buffer = range_start + left_padding - left_buffer
+    # range_end_after_buffer = range_end + left_padding - left_buffer
+
+    # Calculate the indices of bins corresponding to the ranges
+    start_bin_index = range_start_after_buffer // bin_size
+    print("TEST ranges")
+    print(start_bin_index)
+    
+    end_bin_index = math.ceil(range_end_after_buffer/bin_size)
+    print(end_bin_index)
+    sliced_track = full_track[:, start_bin_index:end_bin_index, :]
+    
+    # Calculate how much of the range is NOT covered by bins
+    first_bin_start = start_bin_index * bin_size - (range_start_padded - left_buffer)
+    print(f"First bin start: {first_bin_start}")
+    last_bin_end = end_bin_index * bin_size - (range_start_padded - left_buffer)
+    print(f"Last bin end: {last_bin_end}")
+    
+    # Bases outside your range in edge bins
+    
+    extraBases_in_left_bin = max(0, -first_bin_start)  # Negative means bin starts before range
+    extraBases_in_right_bin = max(0, last_bin_end - (range_end - range_start))  # Bin extends past range
+    # extraBases_in_left_bin_myway = range_start_after_buffer - (start_bin_index * bin_size) # This calculates the actual number of bases in the leftmost bin that are outside the range by determining how many bases of the range are left after accounting for the full bins that come before it. 
+    print("extra bases in left bin")
+    print(extraBases_in_left_bin)
+    return sliced_track, extraBases_in_left_bin #, extraBases_in_left_bin_myway
 
 
 def filter_evaluator_request(simplified_targets_df, request_type, cell_type, matcher_ip, matcher_port, molecule=None):
@@ -315,3 +375,4 @@ def filter_evaluator_request(simplified_targets_df, request_type, cell_type, mat
         error_message = f"Internal Server Error: The dependent Matcher service at {matcher_ip}:{matcher_port} is unavailable."
         # Return a 4-element tuple to match the success signature and avoid crashing the caller
         return error_message, None, None, "error"
+    

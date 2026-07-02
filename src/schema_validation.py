@@ -51,7 +51,7 @@ def preprocess_data(payload):
     errors = {'prediction_request_failed': []}
     sequences = payload.get('sequences', {})
     
-    # Model-specific: Adapters are added to each sequence then the prediction ranges are used to crop sequences
+    # Model-specific: Adapters are added to each sequence, prediction ranges are used with respect to sequence with any upstream/downstream flanks from Evaluator 
     if 'upstream_seq' in payload or 'downstream_seq' in payload:
         upstream_seq = payload.get('upstream_seq', "")
         downstream_seq = payload.get('downstream_seq',"")
@@ -85,15 +85,5 @@ def preprocess_data(payload):
     if any(errors.values()):
         flagged_errors = [msg for sublist in errors.values() for msg in sublist]
         raise PredictionFailedError(flagged_errors)
-                
-    # Apply prediction_ranges if provided
-    if 'prediction_ranges' in payload:
-        for seq_id, pr in payload['prediction_ranges'].items():
-            if pr: # Only process non-empty ranges
-                start, end = pr
-
-                # Slice the sequence. `prediction_range` is start, end inclusive
-                sequences[seq_id] = sequences[seq_id][start:end+1]
-                print(f"Sequence '{seq_id}' trimmed to prediction range [{start}, {end}].")
-   
+            
     return sequences

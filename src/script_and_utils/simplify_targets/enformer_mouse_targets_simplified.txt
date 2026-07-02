@@ -1,0 +1,1644 @@
+	Assay	Cell Type	Molecule
+0	DNASE	B6D2F1/J 416B	
+1	DNASE	BALB/cAnN A20	
+2	DNASE	C57BL/6 B cell male adult (8 weeks)	
+3	DNASE	C57BL/6 splenic B cell male adult (8 weeks)	
+4	DNASE	C57BL/6 cerebellum male adult (8 weeks)	
+5	DNASE	C57BL/6 telencephalon male adult (8 weeks)	
+6	DNASE	CD-1 c-Kit-negative CD71-positive TER-119-positive erythroid progenitor cells male embryo (14.5 days)	
+7	DNASE	CD-1 c-Kit-positive CD71-negative TER-119-negative erythroid progenitor cells male embryo (14.5 days)	
+8	DNASE	CD-1 c-Kit-positive CD71-positive TER-119-negative erythroid progenitor cells male embryo (14.5 days)	
+9	DNASE	CD-1 c-Kit-positive CD71-positive TER-119-positive erythroid progenitor cells male embryo (14.5 days)	
+10	DNASE	129 ES-CJ7	
+11	DNASE	129 ES-E14	
+12	DNASE	mixed WW6	
+13	DNASE	mixed WW6	
+14	DNASE	C57BL/6 fibroblast of lung male adult (8 weeks)	
+15	DNASE	CD-1 forelimb bud male embryo (11.5 days)	
+16	DNASE	C57BL/6 gonadal fat pad male adult (8 weeks)	
+17	DNASE	CD-1 embryo male embryo (11.5 days) depleted in head	
+18	DNASE	C57BL/6 heart male adult (8 weeks)	
+19	DNASE	CD-1 hindlimb bud male embryo (11.5 days)	
+20	DNASE	C57BL/6 kidney male adult (8 weeks)	
+21	DNASE	C57BL/6 large intestine male adult (8 weeks)	
+22	DNASE	C57BL/6 liver male embryo (14.5 days)	
+23	DNASE	129 liver male embryo (14.5 days)	
+24	DNASE	129 liver male embryo (14.5 days)	
+25	DNASE	C57BL/6 lung male adult (8 weeks)	
+26	DNASE	DBA/2 MEL cell line	
+27	DNASE	CD-1 mesoderm male embryo (11.5 days)	
+28	DNASE	DBA/2 MEL-GATA-1-ER	
+29	DNASE	DBA/2 erythroblast originated from MEL-GATA-1-ER treated with 1 uM estradiol for 24 hours	
+30	DNASE	DBA/2 erythroblast originated from MEL-GATA-1-ER treated with 1 uM estradiol for 48 hours	
+31	DNASE	NIH/Swiss NIH3T3	
+32	DNASE	M.spretus x C57BL/6J Patski	
+33	DNASE	C57BL/6 retina male postnatal (7 days)	
+34	DNASE	C57BL/6 retina male postnatal (1 day)	
+35	DNASE	C57BL/6 retina male adult (8 weeks)	
+36	DNASE	C57BL/6 skeletal muscle tissue male adult (8 weeks)	
+37	DNASE	C57BL/6 spleen male adult (8 weeks)	
+38	DNASE	C57BL/6 CD4-positive helper T cell male adult (8 weeks)	
+39	DNASE	C57BL/6 thymus male adult (8 weeks)	
+40	DNASE	C57BL/6 induced T-regulatory cell male adult (8 weeks)	
+41	DNASE	C57BL/6 brain male embryo (14.5 days)	
+42	DNASE	C57BL/6 brain male adult (8 weeks)	
+43	DNASE	C57BL/6 brain male embryo (18.5 days)	
+44	DNASE	129 ZHBTc4-mESC	
+45	DNASE	129 ZHBTc4-mESC treated with 100 ng/mL doxycycline hyclate for 24 hours	
+46	DNASE	129 ZHBTc4-mESC treated with 100 ng/mL doxycycline hyclate for 6 hours	
+47	DNASE	C57BL/6 heart postnatal (0 days)	
+48	DNASE	C57BL/6 forebrain embryo (11.50 days)	
+49	DNASE	C57BL/6 kidney postnatal (0 days)	
+50	DNASE	C57BL/6 lung postnatal (0 days)	
+51	DNASE	C57BL/6 embryo embryo (10.5 days)	
+52	DNASE	C57BL/6 hindbrain embryo (14.5 days)	
+53	DNASE	C57BL/6 embryonic facial prominence embryo (11.5 days)	
+54	DNASE	C57BL/6 liver postnatal (0 days)	
+55	DNASE	C57BL/6 hindbrain embryo (10.50 days)	
+56	DNASE	C57BL/6 midbrain embryo (11.5 days)	
+57	DNASE	C57BL/6 neural tube embryo (11.5 days)	
+58	DNASE	C57BL/6 R1	
+59	DNASE	C57BL/6 forebrain embryo (14.5 days)	
+60	DNASE	C57BL/6 hindbrain embryo (11.5 days)	
+61	DNASE	C57BL/6 midbrain embryo (14.5 days)	
+62	DNASE	DBA/2 MEL cell line treated with 125 uM zinc dichloride for 24 hours	
+63	DNASE	C57BL/6 limb embryo (10.50 days)	
+64	DNASE	DBA/2 MEL cell line	
+65	DNASE	C57BL/6 hindbrain postnatal (0 days)	
+66	DNASE	C57BL/6 retina embryo (14.5 days)	
+67	DNASE	C57BL/6 liver embryo (11.50 days)	
+68	DNASE	C57BL/6 limb embryo (14.5 days)	
+69	DNASE	C57BL/6 intestine embryo (14.50 days)	
+70	DNASE	C57BL/6 neural tube embryo (10.50 days)	
+71	DNASE	C57BL/6 limb embryo (11.5 days)	
+72	DNASE	C57BL/6 Muller cell postnatal (12 days)	
+73	DNASE	C57BL/6 3T3-L1	
+74	DNASE	C57BL/6 embryo embryo (9.50 days)	
+75	DNASE	C57BL/6 embryo embryo (10 days)	
+76	DNASE	C57BL/6 MN1	
+77	DNASE	C57BL/6 lung embryo (14.5 days)	
+78	DNASE	C57BL/6 heart embryo (10.50 days)	
+79	DNASE	C57BL/6 forebrain embryo (10.50 days)	
+80	DNASE	C57BL/6 midbrain postnatal (0 days)	
+81	DNASE	C57BL/6 midbrain embryo (10.50 days)	
+82	DNASE	C57BL/6 embryo embryo (11 day)	
+83	DNASE	C57BL/6 embryonic facial prominence embryo (10.50 days)	
+84	DNASE	C57BL/6 forebrain postnatal (0 days)	
+85	DNASE	C57BL/6 acute myeloid leukemia	
+86	DNASE	C57BL/6 yolk sac embryo (10.50 days)	
+87	DNASE	C57BL/6 MN1 treated with 10 nM methyltrienolone	
+88	DNASE	C57BL/6 thymus postnatal (0 days)	
+89	DNASE	C57BL/6 embryonic facial prominence embryo (14.5 days)	
+90	DNASE	C57BL/6 R1	
+91	DNASE	C57BL/6 stomach postnatal (0 days)	
+92	DNASE	C57BL/6 adipocyte	
+93	DNASE	DNase ZT 2 WT / Liver, WT, ZT 2, DNase / .	
+94	DNASE	DNase ZT 6 WT / Liver, WT, ZT 6, DNase / .	
+95	DNASE	DNase ZT 10 WT / Liver, WT, ZT 10, DNase / .	
+96	DNASE	DNase ZT 14 WT / Liver, WT, ZT 14, DNase / .	
+97	DNASE	DNase ZT 18 WT / Liver, WT, ZT 18, DNase / .	
+98	DNASE	DNase ZT 22 WT / Liver, WT, ZT 22, DNase / .	
+99	DNASE	DNase ZT 26 WT / Liver, WT, ZT 26, DNase / .	
+100	DNASE	DNase ZT 6 Bmal1 KO / Liver, Bmal1 KO, ZT 6, DNase / .	
+101	ATAC	C57BL/6 hindbrain embryo (11.5 days)	
+102	ATAC	C57BL/6 kidney embryo (15.5 days)	
+103	ATAC	C57BL/6 megakaryocyte-erythroid progenitor cell male adult (5-6 weeks)	
+104	ATAC	C57BL/6 intestine postnatal (0 days)	
+105	ATAC	C57BL/6 hindbrain embryo (12.5 days)	
+106	ATAC	C57BL/6 midbrain embryo (16.5 days)	
+107	ATAC	C57BL/6 lung postnatal (0 days)	
+108	ATAC	C57BL/6 erythroid progenitor cell male adult (5-6 weeks)	
+109	ATAC	C57BL/6 hindbrain embryo (13.5 days)	
+110	ATAC	C57BL/6 megakaryocyte progenitor cell male adult (5-6 weeks)	
+111	ATAC	C57BL/6 granulocyte monocyte progenitor cell male adult (5-6 weeks)	
+112	ATAC	C57BL/6 forebrain embryo (11.5 days)	
+113	ATAC	C57BL/6 G1E	
+114	ATAC	C57BL/6 liver embryo (12.5 days)	
+115	ATAC	C57BL/6 forebrain postnatal (0 days)	
+116	ATAC	C57BL/6 hindbrain postnatal (0 days)	
+117	ATAC	C57BL/6 neutrophil adult (5-6 weeks)	
+118	ATAC	C57BL/6 hematopoietic stem cell adult (5-6 weeks)	
+119	ATAC	C57BL/6 midbrain embryo (11.5 days)	
+120	ATAC	C57BL/6 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	
+121	ATAC	C57BL/6 hematopoietic stem cell	
+122	ATAC	C57BL/6 midbrain embryo (15.5 days)	
+123	ATAC	C57BL/6 megakaryocyte male adult (5-6 weeks)	
+124	ATAC	C57BL/6 cerebellum adult	
+125	ATAC	C57BL/6 forebrain embryo (12.5 days)	
+126	ATAC	C57BL/6 stomach postnatal (0 days)	
+127	ATAC	C57BL/6 liver postnatal (0 days)	
+128	ATAC	C57BL/6 hindbrain embryo (16.5 days)	
+129	ATAC	C57BL/6 kidney embryo (16.5 days)	
+130	ATAC	C57BL/6 liver embryo (11.5 days)	
+131	ATAC	C57BL/6 erythroblast male adult (5-6 weeks)	
+132	ATAC	C57BL/6 forebrain embryo (14.5 days)	
+133	ATAC	C57BL/6 midbrain embryo (13.5 days)	
+134	ATAC	C57BL/6 forebrain embryo (16.5 days)	
+135	ATAC	C57BL/6 monocyte adult (5-6 weeks)	
+136	ATAC	C57BL/6 frontal cortex adult	
+137	ATAC	C57BL/6 forebrain embryo (13.5 days)	
+138	ATAC	C57BL/6 common myeloid progenitor male adult (5-6 weeks)	
+139	ATAC	C57BL/6 intestine embryo (15.5 days)	
+140	ATAC	C57BL/6 intestine embryo (16.5 days)	
+141	ATAC	C57BL/6 forebrain embryo (15.5 days)	
+142	ATAC	C57BL/6 neural tube embryo (15.5 days)	
+143	ATAC	Unknown-clusters_1-cluster_1	
+144	ATAC	Unknown-clusters_1-cluster_2	
+145	ATAC	Unknown-clusters_1-cluster_3	
+146	ATAC	Hematopoietic_progenitors-clusters_10-cluster_1	
+147	ATAC	Proximal_tubule-clusters_11-cluster_1	
+148	ATAC	Proximal_tubule-clusters_11-cluster_2	
+149	ATAC	Proximal_tubule-clusters_11-cluster_3	
+150	ATAC	Proximal_tubule_S3-clusters_11-cluster_4	
+151	ATAC	Proximal_tubule-clusters_11-cluster_5	
+152	ATAC	T_cells-clusters_12-cluster_1	
+153	ATAC	Regulatory_T_cells-clusters_12-cluster_2	
+154	ATAC	NK_cells-clusters_12-cluster_3	
+155	ATAC	T_cells-clusters_12-cluster_4	
+156	ATAC	T_cells-clusters_12-cluster_5	
+157	ATAC	Erythroblasts-clusters_13-cluster_1	
+158	ATAC	Sperm-clusters_14-cluster_1	
+159	ATAC	Sperm-clusters_14-cluster_2	
+160	ATAC	Sperm-clusters_14-cluster_3	
+161	ATAC	Inhibitory_neurons-clusters_15-cluster_1	
+162	ATAC	Inhibitory_neurons-clusters_15-cluster_2	
+163	ATAC	SOM+_Interneurons-clusters_15-cluster_3	
+164	ATAC	B_cells-clusters_16-cluster_1	
+165	ATAC	Macrophages-clusters_16-cluster_2	
+166	ATAC	Microglia-clusters_16-cluster_3	
+167	ATAC	Dendritic_cells-clusters_17-cluster_1	
+168	ATAC	Alveolar_macrophages-clusters_17-cluster_2	
+169	ATAC	Dendritic_cells-clusters_17-cluster_3	
+170	ATAC	Collisions-clusters_17-cluster_4	
+171	ATAC	Collisions-clusters_17-cluster_5	
+172	ATAC	DCT_CD-clusters_18-cluster_1	
+173	ATAC	Loop_of_henle-clusters_18-cluster_2	
+174	ATAC	Loop_of_henle-clusters_18-cluster_3	
+175	ATAC	Distal_convoluted_tubule-clusters_18-cluster_4	
+176	ATAC	Collecting_duct-clusters_18-cluster_5	
+177	ATAC	Astrocytes-clusters_19-cluster_1	
+178	ATAC	Astrocytes-clusters_19-cluster_2	
+179	ATAC	Astrocytes-clusters_19-cluster_3	
+180	ATAC	Astrocytes-clusters_19-cluster_4	
+181	ATAC	T_cells-clusters_2-cluster_1	
+182	ATAC	Type_I_pneumocytes-clusters_20-cluster_1	
+183	ATAC	Oligodendrocytes-clusters_21-cluster_1	
+184	ATAC	Oligodendrocytes-clusters_21-cluster_2	
+185	ATAC	Endothelial_I_cells-clusters_22-cluster_1	
+186	ATAC	Endothelial_I_(glomerular)-clusters_22-cluster_2	
+187	ATAC	Endothelial_I_cells-clusters_22-cluster_3	
+188	ATAC	Endothelial_I_cells-clusters_22-cluster_4	
+189	ATAC	Endothelial_II_cells-clusters_23-cluster_1	
+190	ATAC	Unknown-clusters_23-cluster_2	
+191	ATAC	Monocytes-clusters_24-cluster_1	
+192	ATAC	Monocytes-clusters_24-cluster_2	
+193	ATAC	Podocytes-clusters_25-cluster_1	
+194	ATAC	Endothelial_II_cells-clusters_25-cluster_2	
+195	ATAC	Endothelial_II_cells-clusters_25-cluster_3	
+196	ATAC	T_cells-clusters_26-cluster_1	
+197	ATAC	Collisions-clusters_26-cluster_2	
+198	ATAC	Collisions-clusters_26-cluster_3	
+199	ATAC	Purkinje_cells-clusters_27-cluster_1	
+200	ATAC	Collisions-clusters_27-cluster_2	
+201	ATAC	Collisions-clusters_27-cluster_3	
+202	ATAC	Immature_B_cells-clusters_28-cluster_1	
+203	ATAC	Immature_B_cells-clusters_28-cluster_2	
+204	ATAC	Ex_neurons_SCPN-clusters_29-cluster_1	
+205	ATAC	Hepatocytes-clusters_3-cluster_1	
+206	ATAC	Type_II_pneumocytes-clusters_30-cluster_1	
+207	ATAC	Unknown-clusters_30-cluster_2	
+208	ATAC	Collisions-clusters_30-cluster_3	
+209	ATAC	Unknown-clusters_30-cluster_4	
+210	ATAC	B_cells-clusters_4-cluster_1	
+211	ATAC	B_cells-clusters_4-cluster_2	
+212	ATAC	B_cells-clusters_4-cluster_3	
+213	ATAC	Activated_B_cells-clusters_4-cluster_4	
+214	ATAC	Ex_neurons_CPN-clusters_5-cluster_1	
+215	ATAC	Ex_neurons_SCPN-clusters_5-cluster_2	
+216	ATAC	Ex_neurons_CThPN-clusters_5-cluster_3	
+217	ATAC	Ex_neurons_CThPN-clusters_5-cluster_4	
+218	ATAC	Inhibitory_neurons-clusters_5-cluster_5	
+219	ATAC	Unknown-clusters_5-cluster_6	
+220	ATAC	Enterocytes-clusters_6-cluster_1	
+221	ATAC	Cardiomyocytes-clusters_7-cluster_1	
+222	ATAC	Unknown-clusters_7-cluster_2	
+223	ATAC	Cerebellar_granule_cells-clusters_8-cluster_1	
+224	ATAC	Cerebellar_granule_cells-clusters_8-cluster_2	
+225	ATAC	Unknown-clusters_9-cluster_1	
+226	ATAC	Endothelial_II_cells-clusters_9-cluster_2	
+227	ATAC	Endothelial_II_cells-clusters_9-cluster_3	
+228	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K4me3
+229	CHIP	129 ES-E14	H3K4me1
+230	CHIP	129 ES-E14	H3K4me3
+231	CHIP	129 ES-E14	H3K9me3
+232	CHIP	DBA/2 MEL cell line	H3K27me3
+233	CHIP	DBA/2 MEL cell line	H3K4me1
+234	CHIP	DBA/2 MEL cell line	H3K4me3
+235	CHIP	DBA/2 MEL cell line	H3K9me3
+236	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	H3K27me3
+237	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	H3K36me3
+238	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	H3K4me1
+239	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	H3K4me3
+240	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	H3K9me3
+241	CHIP	C3H C2C12	H3K36me3
+242	CHIP	C3H myocyte originated from C2C12	H3K27me3
+243	CHIP	C3H myocyte originated from C2C12	H3K79me2
+244	CHIP	C3H C2C12	H3K4me3
+245	CHIP	C3H C2C12	H3ac
+246	CHIP	C3H C2C12	H3K79me2
+247	CHIP	C3H C2C12	H3K27me3
+248	CHIP	C3H myocyte originated from C2C12	H3K4me2
+249	CHIP	C3H myocyte originated from C2C12	H3K4me3
+250	CHIP	C3H myocyte originated from C2C12	H3ac
+251	CHIP	C3H myocyte originated from C2C12	H3K36me3
+252	CHIP	C3H C2C12	H3K79me3
+253	CHIP	C3H myocyte originated from C2C12	CEBPB
+254	CHIP	C3H myocyte originated from C2C12	MYOG
+255	CHIP	C3H myocyte originated from C2C12	MYOG
+256	CHIP	C3H myocyte originated from C2C12	USF1
+257	CHIP	C3H C2C12	MYOD1
+258	CHIP	C3H myocyte originated from C2C12	MYOD1
+259	CHIP	C3H myocyte originated from C2C12	E2F4
+260	CHIP	C3H C2C12	CTCF
+261	CHIP	C3H myocyte originated from C2C12	MAX
+262	CHIP	C3H myocyte originated from C2C12	SRF
+263	CHIP	C3H myocyte originated from C2C12	TCF12
+264	CHIP	C3H C2C12	MAX
+265	CHIP	C3H myocyte originated from C2C12	TCF3
+266	CHIP	C3H C2C12	USF1
+267	CHIP	C3H myocyte originated from C2C12	MYOD1
+268	CHIP	C3H myocyte originated from C2C12	REST
+269	CHIP	C3H myocyte originated from C2C12	MYOD1
+270	CHIP	C3H myocyte originated from C2C12	POLR2AphosphoS2
+271	CHIP	C3H C2C12	CEBPB
+272	CHIP	C3H myocyte originated from C2C12	MYOG
+273	CHIP	C3H myocyte originated from C2C12	POLR2A
+274	CHIP	C57BL/6 heart male adult (8 weeks)	H3K4me1
+275	CHIP	C57BL/6 kidney male adult (8 weeks)	H3K4me1
+276	CHIP	C57BL/6 bone marrow male adult (8 weeks)	H3K4me1
+277	CHIP	C57BL/6 bone marrow male adult (8 weeks)	H3K4me3
+278	CHIP	C57BL/6 cortical plate male adult (8 weeks)	H3K4me1
+279	CHIP	C57BL/6 cerebellum male adult (8 weeks)	H3K4me3
+280	CHIP	C57BL/6 cerebellum male adult (8 weeks)	H3K4me1
+281	CHIP	C57BL/6 heart male adult (8 weeks)	H3K4me3
+282	CHIP	C57BL/6 kidney male adult (8 weeks)	H3K4me3
+283	CHIP	C57BL/6 liver male adult (8 weeks)	H3K4me1
+284	CHIP	C57BL/6 liver male adult (8 weeks)	H3K4me3
+285	CHIP	C57BL/6 lung male adult (8 weeks)	H3K4me1
+286	CHIP	C57BL/6 embryonic fibroblast male embryo (13.5 weeks)	H3K4me1
+287	CHIP	C57BL/6 embryonic fibroblast male embryo (13.5 weeks)	H3K4me3
+288	CHIP	C57BL/6 spleen male adult (8 weeks)	H3K4me1
+289	CHIP	C57BL/6 ES-Bruce4	H3K4me1
+290	CHIP	C57BL/6 ES-Bruce4	H3K4me3
+291	CHIP	C57BL/6 heart male adult (8 weeks)	CTCF
+292	CHIP	C57BL/6 kidney male adult (8 weeks)	CTCF
+293	CHIP	C57BL/6 kidney male adult (8 weeks)	POLR2A
+294	CHIP	C57BL/6 bone marrow male adult (8 weeks)	CTCF
+295	CHIP	C57BL/6 bone marrow male adult (8 weeks)	POLR2A
+296	CHIP	C57BL/6 cerebellum male adult (8 weeks)	CTCF
+297	CHIP	C57BL/6 cerebellum male adult (8 weeks)	POLR2A
+298	CHIP	C57BL/6 heart male adult (8 weeks)	POLR2A
+299	CHIP	C57BL/6 liver male adult (8 weeks)	CTCF
+300	CHIP	C57BL/6 lung male adult (8 weeks)	CTCF
+301	CHIP	C57BL/6 embryonic fibroblast male embryo (13.5 weeks)	CTCF
+302	CHIP	C57BL/6 embryonic fibroblast male embryo (13.5 weeks)	POLR2A
+303	CHIP	C57BL/6 spleen male adult (8 weeks)	POLR2A
+304	CHIP	C57BL/6 heart male adult (8 weeks)	EP300
+305	CHIP	C57BL/6 ES-Bruce4	CTCF
+306	CHIP	C57BL/6 ES-Bruce4	POLR2A
+307	CHIP	C57BL/6 ES-Bruce4	EP300
+308	CHIP	C57BL/6 olfactory bulb male adult (8 weeks)	H3K27ac
+309	CHIP	C57BL/6 olfactory bulb male adult (8 weeks)	H3K4me1
+310	CHIP	C57BL/6 thymus male adult (8 weeks)	H3K27ac
+311	CHIP	C57BL/6 thymus male adult (8 weeks)	H3K4me1
+312	CHIP	C57BL/6 thymus male adult (8 weeks)	H3K4me3
+313	CHIP	C57BL/6 bone marrow male adult (8 weeks)	H3K27ac
+314	CHIP	C57BL/6 small intestine male adult (8 weeks)	H3K27ac
+315	CHIP	C57BL/6 small intestine male adult (8 weeks)	H3K4me1
+316	CHIP	C57BL/6 small intestine male adult (8 weeks)	H3K4me3
+317	CHIP	C57BL/6 testis male adult (8 weeks)	H3K27ac
+318	CHIP	C57BL/6 testis male adult (8 weeks)	H3K4me1
+319	CHIP	C57BL/6 testis male adult (8 weeks)	H3K4me3
+320	CHIP	C57BL/6 cerebellum male adult (8 weeks)	H3K27ac
+321	CHIP	C57BL/6 cortical plate male adult (8 weeks)	H3K27ac
+322	CHIP	C57BL/6 ES-Bruce4	H3K27ac
+323	CHIP	C57BL/6 heart male adult (8 weeks)	H3K27ac
+324	CHIP	C57BL/6 kidney male adult (8 weeks)	H3K27ac
+325	CHIP	C57BL/6 liver male adult (8 weeks)	H3K27ac
+326	CHIP	C57BL/6 embryonic fibroblast male embryo (13.5 weeks)	H3K27ac
+327	CHIP	C57BL/6 spleen male adult (8 weeks)	H3K27ac
+328	CHIP	C57BL/6 heart embryo (14.5 days)	H3K27ac
+329	CHIP	C57BL/6 heart embryo (14.5 days)	H3K4me1
+330	CHIP	C57BL/6 heart embryo (14.5 days)	H3K4me3
+331	CHIP	C57BL/6 placenta female adult (8 weeks)	H3K27ac
+332	CHIP	C57BL/6 placenta female adult (8 weeks)	H3K4me1
+333	CHIP	C57BL/6 placenta female adult (8 weeks)	H3K4me3
+334	CHIP	C57BL/6 olfactory bulb male adult (8 weeks)	H3K4me3
+335	CHIP	C57BL/6 liver embryo (14.5 days)	H3K27ac
+336	CHIP	C57BL/6 liver embryo (14.5 days)	H3K4me3
+337	CHIP	C57BL/6 liver embryo (14.5 days)	H3K4me1
+338	CHIP	C57BL/6 olfactory bulb male adult (8 weeks)	POLR2A
+339	CHIP	C57BL/6 small intestine male adult (8 weeks)	POLR2A
+340	CHIP	C57BL/6 testis male adult (8 weeks)	CTCF
+341	CHIP	C57BL/6 testis male adult (8 weeks)	POLR2A
+342	CHIP	C57BL/6 heart male adult (8 weeks)	H3K27me3
+343	CHIP	C57BL/6 heart male adult (8 weeks)	H3K36me3
+344	CHIP	C57BL/6 heart male adult (8 weeks)	H3K79me2
+345	CHIP	C57BL/6 heart male adult (8 weeks)	H3K9ac
+346	CHIP	C57BL/6 liver male adult (8 weeks)	H3K27me3
+347	CHIP	C57BL/6 liver male adult (8 weeks)	H3K36me3
+348	CHIP	C57BL/6 liver male adult (8 weeks)	H3K79me2
+349	CHIP	C57BL/6 liver male adult (8 weeks)	H3K9ac
+350	CHIP	DBA/2 MEL cell line	H3K27me3
+351	CHIP	DBA/2 MEL cell line	H3K36me3
+352	CHIP	DBA/2 MEL cell line	H3K79me2
+353	CHIP	DBA/2 MEL cell line	H3K9ac
+354	CHIP	DBA/2 MEL cell line	H3K27ac
+355	CHIP	DBA/2 MEL cell line	H3K4me1
+356	CHIP	DBA/2 MEL cell line	H3K4me3
+357	CHIP	C57BL/6 brown adipose tissue male adult (24 weeks)	H3K27ac
+358	CHIP	C57BL/6 brown adipose tissue male adult (24 weeks)	H3K4me1
+359	CHIP	C57BL/6 brown adipose tissue male adult (24 weeks)	H3K4me3
+360	CHIP	C57BL/6 bone marrow macrophage male adult (8 weeks)	H3K27ac
+361	CHIP	C57BL/6 bone marrow macrophage male adult (8 weeks)	H3K4me1
+362	CHIP	C57BL/6 bone marrow macrophage male adult (8 weeks)	H3K4me3
+363	CHIP	DBA/2 MEL cell line	CTCF
+364	CHIP	DBA/2 MEL cell line	POLR2A
+365	CHIP	C57BL/6 bone marrow macrophage male adult (8 weeks)	CTCF
+366	CHIP	C57BL/6 bone marrow macrophage male adult (8 weeks)	POLR2A
+367	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K36me3
+368	CHIP	C57BL/6 cerebellum male adult (8 weeks)	H3K27me3
+369	CHIP	C57BL/6 ES-Bruce4	H3K27me3
+370	CHIP	C57BL/6 ES-Bruce4	H3K36me3
+371	CHIP	C57BL/6 kidney male adult (8 weeks)	H3K27me3
+372	CHIP	C57BL/6 kidney male adult (8 weeks)	H3K36me3
+373	CHIP	C57BL/6 small intestine male adult (8 weeks)	H3K27me3
+374	CHIP	C57BL/6 small intestine male adult (8 weeks)	H3K36me3
+375	CHIP	C57BL/6 spleen male adult (8 weeks)	H3K36me3
+376	CHIP	C57BL/6 testis male adult (8 weeks)	H3K36me3
+377	CHIP	C57BL/6 thymus male adult (8 weeks)	H3K36me3
+378	CHIP	C57BL/6 splenic B cell male adult (8 weeks)	H3K27me3
+379	CHIP	C57BL/6 splenic B cell male adult (8 weeks)	H3K36me3
+380	CHIP	C57BL/6 ES-Bruce4	H3K9me3
+381	CHIP	C57BL/6 spleen male adult (8 weeks)	H3K27me3
+382	CHIP	C57BL/6 testis male adult (8 weeks)	H3K27me3
+383	CHIP	C57BL/6 thymus male adult (8 weeks)	H3K27me3
+384	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K4me1
+385	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K4me2
+386	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K27ac
+387	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K4me3
+388	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K9ac
+389	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K79me2
+390	CHIP	129 ES-E14	H3K4me1
+391	CHIP	129 ES-E14	H3K4me3
+392	CHIP	129 ES-E14	H3K9ac
+393	CHIP	129 ES-E14	H3K27ac
+394	CHIP	129 ES-E14	H3K36me3
+395	CHIP	C57BL/6 ES-Bruce4	H3K9ac
+396	CHIP	CD-1 megakaryocyte embryo (14.5 days)	FLI1
+397	CHIP	CD-1 megakaryocyte embryo (14.5 days)	H3K27me3
+398	CHIP	CD-1 erythroblast embryo (14.5 days)	H3K4me3
+399	CHIP	CD-1 megakaryocyte embryo (14.5 days)	H3K9me3
+400	CHIP	CD-1 megakaryocyte embryo (14.5 days)	H3K36me3
+401	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	H3K9me3
+402	CHIP	CD-1 erythroblast embryo (14.5 days)	H3K4me1
+403	CHIP	CD-1 erythroblast embryo (14.5 days)	H3K36me3
+404	CHIP	129 G1E	H3K9me3
+405	CHIP	CD-1 erythroblast embryo (14.5 days)	H3K9me3
+406	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K9me3
+407	CHIP	CD-1 erythroblast embryo (14.5 days)	H3K27me3
+408	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K4me1
+409	CHIP	CD-1 megakaryocyte embryo (14.5 days)	H3K4me1
+410	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	H3K36me3
+411	CHIP	CD-1 megakaryocyte embryo (14.5 days)	H3K4me3
+412	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K4me3
+413	CHIP	129 G1E	H3K36me3
+414	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K36me3
+415	CHIP	129 G1E	H3K27me3
+416	CHIP	B10.H-2aH-4bp/Wts CH12.LX	H3K27me3
+417	CHIP	DBA/2 MEL cell line	POLR2AphosphoS5
+418	CHIP	DBA/2 MEL cell line	TAL1
+419	CHIP	129 G1E	GATA1
+420	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	GATA2
+421	CHIP	129 G1E	GATA2
+422	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	POLR2AphosphoS5
+423	CHIP	129 G1E	POLR2AphosphoS5
+424	CHIP	B10.H-2aH-4bp/Wts CH12.LX	PAX5
+425	CHIP	CD-1 erythroblast embryo (14.5 days)	GATA1
+426	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	TAL1
+427	CHIP	129 G1E	TAL1
+428	CHIP	DBA/2 MEL cell line	CTCF
+429	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	GATA1
+430	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	CTCF
+431	CHIP	129 G1E	CTCF
+432	CHIP	B10.H-2aH-4bp/Wts CH12.LX	CTCF
+433	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	H3K4me3
+434	CHIP	129 G1E	H3K4me3
+435	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	H3K4me1
+436	CHIP	129 G1E-ER4 treated with 10 nM 17B-estradiol for 24 hours	H3K27me3
+437	CHIP	129 G1E	H3K4me1
+438	CHIP	B10.H-2aH-4bp/Wts CH12.LX	ZNF384
+439	CHIP	B10.H-2aH-4bp/Wts CH12.LX	ZMIZ1
+440	CHIP	B10.H-2aH-4bp/Wts CH12.LX	ZC3H11A
+441	CHIP	B10.H-2aH-4bp/Wts CH12.LX	HCFC1
+442	CHIP	B10.H-2aH-4bp/Wts CH12.LX	GABPA
+443	CHIP	B10.H-2aH-4bp/Wts CH12.LX	MAZ
+444	CHIP	B10.H-2aH-4bp/Wts CH12.LX	KAT2A
+445	CHIP	B10.H-2aH-4bp/Wts CH12.LX	CHD1
+446	CHIP	B10.H-2aH-4bp/Wts CH12.LX	ZKSCAN1
+447	CHIP	B10.H-2aH-4bp/Wts CH12.LX	UBTF
+448	CHIP	B10.H-2aH-4bp/Wts CH12.LX	SIN3A
+449	CHIP	B10.H-2aH-4bp/Wts CH12.LX	RCOR1
+450	CHIP	B10.H-2aH-4bp/Wts CH12.LX	ETS1
+451	CHIP	B10.H-2aH-4bp/Wts CH12.LX	MAFK
+452	CHIP	B10.H-2aH-4bp/Wts CH12.LX	BHLHE40
+453	CHIP	B10.H-2aH-4bp/Wts CH12.LX	NELFE
+454	CHIP	B10.H-2aH-4bp/Wts CH12.LX	MXI1
+455	CHIP	B10.H-2aH-4bp/Wts CH12.LX	CHD2
+456	CHIP	B10.H-2aH-4bp/Wts CH12.LX	SMC3
+457	CHIP	B10.H-2aH-4bp/Wts CH12.LX	POLR2AphosphoS2
+458	CHIP	B10.H-2aH-4bp/Wts CH12.LX	EP300
+459	CHIP	B10.H-2aH-4bp/Wts CH12.LX	USF2
+460	CHIP	B10.H-2aH-4bp/Wts CH12.LX	RAD21
+461	CHIP	B10.H-2aH-4bp/Wts CH12.LX	MAX
+462	CHIP	B10.H-2aH-4bp/Wts CH12.LX	CTCF
+463	CHIP	B10.H-2aH-4bp/Wts CH12.LX	MYC
+464	CHIP	B10.H-2aH-4bp/Wts CH12.LX	JUN
+465	CHIP	B10.H-2aH-4bp/Wts CH12.LX	TBP
+466	CHIP	B10.H-2aH-4bp/Wts CH12.LX	POLR2A
+467	CHIP	B10.H-2aH-4bp/Wts CH12.LX	JUND
+468	CHIP	B10.H-2aH-4bp/Wts CH12.LX	E2F4
+469	CHIP	129 ES-E14	ZNF384
+470	CHIP	129 ES-E14	ZC3H11A
+471	CHIP	129 ES-E14	HCFC1
+472	CHIP	DBA/2 MEL cell line	ZNF384
+473	CHIP	DBA/2 MEL cell line	ZMIZ1
+474	CHIP	DBA/2 MEL cell line	ZC3H11A
+475	CHIP	DBA/2 MEL cell line	HCFC1
+476	CHIP	DBA/2 MEL cell line	BHLHE40
+477	CHIP	DBA/2 MEL cell line	RCOR1
+478	CHIP	DBA/2 MEL cell line	UBTF
+479	CHIP	DBA/2 MEL cell line	GABPA
+480	CHIP	DBA/2 MEL cell line	MAZ
+481	CHIP	DBA/2 MEL cell line	KAT2A
+482	CHIP	DBA/2 MEL cell line	CHD1
+483	CHIP	DBA/2 MEL cell line	ZKSCAN1
+484	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	MAFK
+485	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	GATA1
+486	CHIP	DBA/2 MEL cell line	ETS1
+487	CHIP	DBA/2 MEL cell line	SIN3A
+488	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	CTCF
+489	CHIP	DBA/2 MEL cell line	USF2
+490	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	POLR2A
+491	CHIP	DBA/2 MEL cell line	MAFK
+492	CHIP	DBA/2 MEL cell line	SMC3
+493	CHIP	DBA/2 MEL cell line	POLR2AphosphoS2
+494	CHIP	DBA/2 MEL cell line	MXI1
+495	CHIP	DBA/2 MEL cell line	CHD2
+496	CHIP	DBA/2 MEL cell line	EP300
+497	CHIP	DBA/2 MEL cell line	CTCF
+498	CHIP	DBA/2 MEL cell line	MYB
+499	CHIP	DBA/2 MEL cell line	RAD21
+500	CHIP	DBA/2 MEL cell line treated with 2% dimethyl sulfoxide for 5 days	RAD21
+501	CHIP	DBA/2 MEL cell line	NELFE
+502	CHIP	DBA/2 MEL cell line	EP300
+503	CHIP	DBA/2 MEL cell line	USF2
+504	CHIP	DBA/2 MEL cell line	MAX
+505	CHIP	DBA/2 MEL cell line	E2F4
+506	CHIP	DBA/2 MEL cell line	JUND
+507	CHIP	DBA/2 MEL cell line	MYC
+508	CHIP	DBA/2 MEL cell line	TBP
+509	CHIP	DBA/2 MEL cell line	POLR2A
+510	CHIP	DBA/2 MEL cell line	GATA1
+511	CHIP	C57BL/6 intestine postnatal (0 days)	CTCF
+512	CHIP	C57BL/6 heart embryo (14.5 days)	H3K9me3
+513	CHIP	C57BL/6 embryonic facial prominence embryo (13.5 days)	H3K27me3
+514	CHIP	C57BL/6 hindbrain embryo (12.5 days)	H3K4me1
+515	CHIP	C57BL/6 forebrain embryo (16.5 days)	H3K9ac
+516	CHIP	C57BL/6 intestine embryo (14.5 days)	H3K27me3
+517	CHIP	C57BL/6 limb embryo (14.5 days)	H3K27ac
+518	CHIP	C57BL/6 limb embryo (13.5 days)	H3K9me3
+519	CHIP	C57BL/6 forebrain embryo (15.5 days)	H3K4me3
+520	CHIP	C57BL/6 stomach embryo (14.5 days)	H3K4me3
+521	CHIP	C57BL/6 lung postnatal (0 days)	H3K27me3
+522	CHIP	C57BL/6 embryonic facial prominence embryo (11.5 days)	H3K36me3
+523	CHIP	C57BL/6 midbrain postnatal (0 days)	H3K9ac
+524	CHIP	C57BL/6 limb embryo (15.5 days)	H3K9me3
+525	CHIP	129 E14TG2a.4	H3K4me1
+526	CHIP	DBA/2 MEL cell line	ELF1
+527	CHIP	C57BL/6 kidney embryo (15.5 days)	H3K4me2
+528	CHIP	C57BL/6 liver embryo (13.5 days)	H3K36me3
+529	CHIP	C57BL/6 midbrain embryo (14.5 days)	H3K4me1
+530	CHIP	C57BL/6 forebrain embryo (13.5 days)	H3K9me3
+531	CHIP	C57BL/6 liver postnatal (0 days)	CTCF
+532	CHIP	C57BL/6 neural tube embryo (15.5 days)	H3K4me3
+533	CHIP	C57BL/6 forebrain embryo (13.5 days)	H3K4me2
+534	CHIP	C57BL/6 liver embryo (13.5 days)	H3K4me1
+535	CHIP	C57BL/6 hindbrain embryo (16.5 days)	H3K27me3
+536	CHIP	C57BL/6 stomach postnatal (0 days)	H3K9ac
+537	CHIP	C57BL/6 intestine embryo (15.5 days)	H3K4me1
+538	CHIP	C57BL/6 heart embryo (14.5 days)	H3K4me3
+539	CHIP	C57BL/6 hindbrain embryo (14.5 days)	H3K27ac
+540	CHIP	C57BL/6 embryonic facial prominence embryo (13.5 days)	H3K4me3
+541	CHIP	C57BL/6 kidney embryo (14.5 days)	H3K27ac
+542	CHIP	C57BL/6 liver embryo (11.5 days)	H3K27ac
+543	CHIP	C57BL/6 embryonic facial prominence embryo (14.5 days)	H3K4me3
+544	CHIP	129 E14TG2a.4	H3K27me3
+545	CHIP	C57BL/6 embryonic facial prominence embryo (15.5 days)	H3K27me3
+546	CHIP	C57BL/6 stomach embryo (14.5 days)	H3K27me3
+547	CHIP	C57BL/6 neural tube embryo (12.5 days)	H3K9ac
+548	CHIP	C57BL/6 midbrain postnatal (0 days)	H3K9me3
+549	CHIP	C57BL/6 forebrain embryo (11.5 days)	H3K36me3
+550	CHIP	C57BL/6 midbrain embryo (13.5 days)	H3K36me3
+551	CHIP	C57BL/6 hindbrain embryo (15.5 days)	H3K27ac
+552	CHIP	C57BL/6 hindbrain embryo (14.5 days)	H3K36me3
+553	CHIP	C57BL/6 midbrain embryo (14.5 days)	H3K9ac
+554	CHIP	C57BL/6 forebrain embryo (11.5 days)	H3K4me2
+555	CHIP	C57BL/6 midbrain embryo (16.5 days)	H3K9ac
+556	CHIP	C57BL/6 forebrain postnatal (0 days)	H3K36me3
+557	CHIP	C57BL/6 heart embryo (13.5 days)	H3K9ac
+558	CHIP	C57BL/6 forebrain postnatal (0 days)	H3K27me3
+559	CHIP	C57BL/6 heart embryo (15.5 days)	H3K9me3
+560	CHIP	C57BL/6 liver embryo (14.5 days)	H3K27ac
+561	CHIP	C57BL/6 embryonic facial prominence embryo (11.5 days)	H3K9ac
+562	CHIP	C57BL/6 stomach embryo (14.5 days)	H3K4me2
+563	CHIP	C57BL/6 heart embryo (14.5 days)	H3K4me1
+564	CHIP	C57BL/6 limb embryo (11.5 days)	H3K27me3
+565	CHIP	C57BL/6 forebrain embryo (13.5 days)	H3K36me3
+566	CHIP	C57BL/6 neural tube embryo (13.5 days)	H3K9ac
+567	CHIP	C57BL/6 midbrain embryo (11.5 days)	H3K27ac
+568	CHIP	C57BL/6 embryonic facial prominence embryo (15.5 days)	H3K4me1
+569	CHIP	C57BL/6 neural tube embryo (14.5 days)	H3K4me3
+570	CHIP	C57BL/6 forebrain postnatal (0 days)	H3K9me3
+571	CHIP	C57BL/6 neural tube embryo (12.5 days)	H3K36me3
+572	CHIP	C57BL/6 forebrain postnatal (0 days)	H3K27ac
+573	CHIP	C57BL/6 liver embryo (16.5 days)	H3K9me3
+574	CHIP	C57BL/6 limb embryo (15.5 days)	H3K4me2
+575	CHIP	C57BL/6 heart embryo (13.5 days)	H3K9me3
+576	CHIP	C57BL/6 neural tube embryo (14.5 days)	H3K27me3
+577	CHIP	C57BL/6 intestine embryo (16.5 days)	H3K4me2
+578	CHIP	C57BL/6 midbrain embryo (12.5 days)	H3K27me3
+579	CHIP	C57BL/6 stomach postnatal (0 days)	CTCF
+580	CHIP	C57BL/6 embryonic facial prominence embryo (12.5 days)	H3K9ac
+581	CHIP	C57BL/6 embryonic facial prominence embryo (12.5 days)	H3K4me3
+582	CHIP	C57BL/6 neural tube embryo (13.5 days)	H3K36me3
+583	CHIP	C57BL/6 lung embryo (14.5 days)	H3K36me3
+584	CHIP	C57BL/6 liver embryo (12.5 days)	H3K4me2
+585	CHIP	C57BL/6 hindbrain embryo (16.5 days)	H3K4me3
+586	CHIP	C57BL/6 limb embryo (11.5 days)	H3K4me2
+587	CHIP	C57BL/6 heart embryo (16.5 days)	H3K4me3
+588	CHIP	C57BL/6 kidney embryo (16.5 days)	H3K36me3
+589	CHIP	C57BL/6 heart embryo (16.5 days)	H3K9me3
+590	CHIP	C57BL/6 heart embryo (12.5 days)	H3K27me3
+591	CHIP	C57BL/6 heart embryo (12.5 days)	H3K27ac
+592	CHIP	C57BL/6 liver embryo (14.5 days)	H3K9me3
+593	CHIP	C57BL/6 forebrain embryo (14.5 days)	H3K9ac
+594	CHIP	C57BL/6 forebrain embryo (16.5 days)	H3K4me3
+595	CHIP	C57BL/6 hindbrain embryo (11.5 days)	H3K27ac
+596	CHIP	C57BL/6 midbrain embryo (13.5 days)	H3K27me3
+597	CHIP	C57BL/6 liver embryo (15.5 days)	H3K4me1
+598	CHIP	C57BL/6 liver embryo (16.5 days)	H3K27me3
+599	CHIP	DBA/2 MEL cell line	NRF1
+600	CHIP	C57BL/6 liver embryo (12.5 days)	H3K27ac
+601	CHIP	C57BL/6 embryonic facial prominence embryo (15.5 days)	H3K9me3
+602	CHIP	C57BL/6 lung embryo (16.5 days)	H3K27ac
+603	CHIP	C57BL/6 kidney postnatal (0 days)	H3K27ac
+604	CHIP	C57BL/6 forebrain embryo (16.5 days)	H3K4me1
+605	CHIP	C57BL/6 kidney postnatal (0 days)	CTCF
+606	CHIP	C57BL/6 embryonic facial prominence embryo (13.5 days)	H3K9me3
+607	CHIP	C57BL/6 lung embryo (14.5 days)	H3K27me3
+608	CHIP	C57BL/6 liver embryo (12.5 days)	H3K9me3
+609	CHIP	C57BL/6 hindbrain postnatal (0 days)	CTCF
+610	CHIP	C57BL/6 embryonic facial prominence embryo (10.5 days)	H3K27ac
+611	CHIP	C57BL/6 lung embryo (16.5 days)	H3K4me2
+612	CHIP	C57BL/6 midbrain embryo (12.5 days)	H3K4me1
+613	CHIP	C57BL/6 intestine embryo (14.5 days)	H3K4me1
+614	CHIP	C57BL/6 hindbrain embryo (12.5 days)	H3K4me3
+615	CHIP	C57BL/6 intestine postnatal (0 days)	H3K4me1
+616	CHIP	C57BL/6 hindbrain embryo (16.5 days)	H3K4me2
+617	CHIP	C57BL/6 forebrain embryo (12.5 days)	H3K9ac
+618	CHIP	C57BL/6 midbrain embryo (13.5 days)	H3K4me3
+619	CHIP	C57BL/6 forebrain embryo (14.5 days)	H3K4me3
+620	CHIP	C57BL/6 liver embryo (13.5 days)	H3K27ac
+621	CHIP	C57BL/6 hindbrain embryo (11.5 days)	H3K36me3
+622	CHIP	C57BL/6 limb embryo (14.5 days)	H3K4me3
+623	CHIP	C57BL/6 hindbrain embryo (14.5 days)	H3K4me3
+624	CHIP	C57BL/6 hindbrain embryo (14.5 days)	H3K9ac
+625	CHIP	C57BL/6 hindbrain embryo (13.5 days)	H3K9ac
+626	CHIP	C57BL/6 liver embryo (13.5 days)	H3K9me3
+627	CHIP	C57BL/6 embryonic facial prominence embryo (15.5 days)	H3K4me2
+628	CHIP	C57BL/6xSv129 liver adult	GATA4
+629	CHIP	C57BL/6 embryonic facial prominence embryo (12.5 days)	H3K4me2
+630	CHIP	C57BL/6 kidney embryo (14.5 days)	H3K4me1
+631	CHIP	C57BL/6 intestine postnatal (0 days)	H3K4me3
+632	CHIP	C57BL/6 midbrain embryo (14.5 days)	H3K4me3
+633	CHIP	C57BL/6 midbrain embryo (16.5 days)	H3K36me3
+634	CHIP	C57BL/6 neural tube embryo (15.5 days)	H3K36me3
+635	CHIP	129 E14TG2a.4	H3K4me3
+636	CHIP	C57BL/6 heart embryo (11.5 days)	H3K27ac
+637	CHIP	C57BL/6 neural tube embryo (14.5 days)	H3K9me3
+638	CHIP	C57BL/6 forebrain embryo (14.5 days)	H3K36me3
+639	CHIP	C57BL/6 limb embryo (12.5 days)	H3K27me3
+640	CHIP	C57BL/6 limb embryo (15.5 days)	H3K27me3
+641	CHIP	C57BL/6 limb embryo (12.5 days)	H3K36me3
+642	CHIP	C57BL/6 liver embryo (14.5 days)	H3K4me1
+643	CHIP	C57BL/6 hindbrain embryo (14.5 days)	H3K4me2
+644	CHIP	C57BL/6 heart postnatal (0 days)	H3K36me3
+645	CHIP	C57BL/6 limb embryo (10.5 days)	H3K4me1
+646	CHIP	C57BL/6 lung postnatal (0 days)	H3K9me3
+647	CHIP	C57BL/6 heart embryo (13.5 days)	H3K36me3
+648	CHIP	C57BL/6 neural tube embryo (11.5 days)	H3K27me3
+649	CHIP	C57BL/6 neural tube embryo (15.5 days)	H3K27ac
+650	CHIP	C57BL/6 limb embryo (10.5 days)	H3K36me3
+651	CHIP	C57BL/6 forebrain embryo (12.5 days)	H3K4me1
+652	CHIP	C57BL/6 limb embryo (15.5 days)	H3K4me3
+653	CHIP	C57BL/6 liver embryo (11.5 days)	H3K27me3
+654	CHIP	C57BL/6 lung embryo (14.5 days)	H3K9ac
+655	CHIP	C57BL/6 lung postnatal (0 days)	H3K36me3
+656	CHIP	C57BL/6 heart embryo (16.5 days)	H3K4me1
+657	CHIP	C57BL/6 liver embryo (16.5 days)	H3K4me3
+658	CHIP	C57BL/6 midbrain embryo (12.5 days)	H3K27ac
+659	CHIP	C57BL/6 midbrain embryo (13.5 days)	H3K4me1
+660	CHIP	129 E14TG2a.4	H3K36me3
+661	CHIP	C57BL/6 midbrain embryo (14.5 days)	H3K27ac
+662	CHIP	C57BL/6 embryonic facial prominence embryo (12.5 days)	H3K27me3
+663	CHIP	C57BL/6 hindbrain embryo (16.5 days)	H3K4me1
+664	CHIP	C57BL/6 embryonic facial prominence embryo (13.5 days)	H3K4me1
+665	CHIP	C57BL/6 liver embryo (15.5 days)	H3K4me2
+666	CHIP	C57BL/6 forebrain postnatal (0 days)	H3K4me3
+667	CHIP	C57BL/6 hindbrain embryo (15.5 days)	H3K27me3
+668	CHIP	C57BL/6 intestine embryo (14.5 days)	H3K9ac
+669	CHIP	C57BL/6 midbrain embryo (11.5 days)	H3K4me2
+670	CHIP	C57BL/6 lung postnatal (0 days)	H3K4me3
+671	CHIP	C57BL/6 neural tube embryo (12.5 days)	H3K4me1
+672	CHIP	C57BL/6 limb embryo (15.5 days)	H3K36me3
+673	CHIP	C57BL/6 forebrain embryo (14.5 days)	H3K4me2
+674	CHIP	C57BL/6 neural tube embryo (14.5 days)	H3K27ac
+675	CHIP	C57BL/6 heart embryo (10.5 days)	H3K27me3
+676	CHIP	C57BL/6 forebrain embryo (14.5 days)	H3K9me3
+677	CHIP	C57BL/6 midbrain embryo (10.5 days)	H3K4me1
+678	CHIP	C57BL/6 intestine embryo (16.5 days)	H3K36me3
+679	CHIP	C57BL/6 limb embryo (14.5 days)	H3K9ac
+680	CHIP	C57BL/6 forebrain embryo (11.5 days)	H3K27ac
+681	CHIP	C57BL/6 stomach embryo (15.5 days)	H3K27me3
+682	CHIP	C57BL/6 stomach embryo (16.5 days)	H3K4me2
+683	CHIP	C57BL/6 midbrain embryo (11.5 days)	H3K4me3
+684	CHIP	C57BL/6 embryonic facial prominence embryo (10.5 days)	H3K27me3
+685	CHIP	C57BL/6 limb embryo (11.5 days)	H3K9ac
+686	CHIP	C57BL/6 midbrain embryo (13.5 days)	H3K9ac
+687	CHIP	C57BL/6 stomach postnatal (0 days)	H3K4me2
+688	CHIP	C57BL/6 kidney postnatal (0 days)	H3K9ac
+689	CHIP	C57BL/6 neural tube embryo (13.5 days)	H3K27ac
+690	CHIP	C57BL/6 stomach embryo (14.5 days)	H3K9ac
+691	CHIP	B10.H-2aH-4bp/Wts CH12.LX	ELF1
+692	CHIP	C57BL/6 lung embryo (16.5 days)	H3K4me3
+693	CHIP	C57BL/6 liver embryo (12.5 days)	H3K36me3
+694	CHIP	C57BL/6 forebrain embryo (12.5 days)	H3K27me3
+695	CHIP	C57BL/6 hindbrain embryo (15.5 days)	H3K9me3
+696	CHIP	C57BL/6 hindbrain embryo (11.5 days)	H3K9me3
+697	CHIP	C57BL/6 hindbrain embryo (12.5 days)	H3K27me3
+698	CHIP	C57BL/6 lung embryo (15.5 days)	H3K4me3
+699	CHIP	C57BL/6 liver postnatal (0 days)	H3K4me1
+700	CHIP	C57BL/6 hindbrain postnatal (0 days)	H3K27me3
+701	CHIP	C57BL/6 lung embryo (14.5 days)	H3K9me3
+702	CHIP	C57BL/6 midbrain embryo (11.5 days)	H3K9me3
+703	CHIP	C57BL/6 intestine embryo (15.5 days)	H3K9me3
+704	CHIP	C57BL/6 forebrain embryo (13.5 days)	H3K27ac
+705	CHIP	C57BL/6 midbrain embryo (12.5 days)	H3K9ac
+706	CHIP	C57BL/6 midbrain embryo (16.5 days)	H3K4me2
+707	CHIP	C57BL/6 hindbrain embryo (13.5 days)	H3K4me3
+708	CHIP	C57BL/6 embryonic facial prominence embryo (12.5 days)	H3K9me3
+709	CHIP	C57BL/6 stomach embryo (14.5 days)	H3K27ac
+710	CHIP	C57BL/6 limb embryo (10.5 days)	H3K4me3
+711	CHIP	C57BL/6 embryonic facial prominence embryo (11.5 days)	H3K4me3
+712	CHIP	C57BL/6 forebrain embryo (14.5 days)	H3K27ac
+713	CHIP	C57BL/6 kidney embryo (15.5 days)	H3K4me3
+714	CHIP	C57BL/6 midbrain postnatal (0 days)	H3K4me2
+715	CHIP	C57BL/6 hindbrain embryo (11.5 days)	H3K4me2
+716	CHIP	C57BL/6 hindbrain embryo (13.5 days)	H3K9me3
+717	CHIP	C57BL/6 heart embryo (10.5 days)	H3K36me3
+718	CHIP	C57BL/6 hindbrain postnatal (0 days)	H3K27ac
+719	CHIP	C57BL/6 limb embryo (15.5 days)	H3K9ac
+720	CHIP	C57BL/6 limb embryo (14.5 days)	H3K9me3
+721	CHIP	C57BL/6 intestine postnatal (0 days)	H3K4me2
+722	CHIP	C57BL/6 hindbrain embryo (15.5 days)	H3K4me3
+723	CHIP	C57BL/6 stomach embryo (14.5 days)	H3K4me1
+724	CHIP	C57BL/6 liver embryo (14.5 days)	H3K27me3
+725	CHIP	C57BL/6 heart embryo (15.5 days)	H3K4me1
+726	CHIP	C57BL/6 midbrain postnatal (0 days)	H3K27me3
+727	CHIP	C57BL/6 lung postnatal (0 days)	H3K4me2
+728	CHIP	C57BL/6 liver postnatal (0 days)	H3K9me3
+729	CHIP	C57BL/6 liver embryo (14.5 days)	H3K4me2
+730	CHIP	C57BL/6 hindbrain embryo (13.5 days)	H3K27ac
+731	CHIP	C57BL/6 forebrain embryo (12.5 days)	H3K36me3
+732	CHIP	C57BL/6 neural tube embryo (13.5 days)	H3K9me3
+733	CHIP	C57BL/6 heart embryo (14.5 days)	H3K9ac
+734	CHIP	C57BL/6 stomach postnatal (0 days)	H3K27ac
+735	CHIP	C57BL/6 midbrain embryo (15.5 days)	H3K9ac
+736	CHIP	DBA/2 MEL cell line	TCF12
+737	CHIP	C57BL/6 hindbrain embryo (13.5 days)	H3K4me1
+738	CHIP	C57BL/6 forebrain embryo (16.5 days)	H3K36me3
+739	CHIP	C57BL/6 forebrain embryo (16.5 days)	H3K9me3
+740	CHIP	C57BL/6 lung postnatal (0 days)	H3K9ac
+741	CHIP	C57BL/6 kidney embryo (16.5 days)	H3K27ac
+742	CHIP	C57BL/6 heart embryo (14.5 days)	H3K27me3
+743	CHIP	C57BL/6 intestine embryo (16.5 days)	H3K9me3
+744	CHIP	C57BL/6 heart embryo (14.5 days)	H3K27ac
+745	CHIP	C57BL/6 kidney postnatal (0 days)	H3K36me3
+746	CHIP	129 E14TG2a.4	CTCF
+747	CHIP	C57BL/6 hindbrain postnatal (0 days)	H3K9me3
+748	CHIP	C57BL/6 forebrain embryo (10.5 days)	H3K4me3
+749	CHIP	C57BL/6 forebrain postnatal (0 days)	H3K9ac
+750	CHIP	C57BL/6 neural tube embryo (12.5 days)	H3K4me2
+751	CHIP	C57BL/6 heart embryo (16.5 days)	H3K9ac
+752	CHIP	C57BL/6 heart postnatal (0 days)	H3K4me2
+753	CHIP	C57BL/6 forebrain embryo (13.5 days)	H3K9ac
+754	CHIP	C57BL/6 hindbrain embryo (11.5 days)	H3K27me3
+755	CHIP	C57BL/6 neural tube embryo (12.5 days)	H3K27me3
+756	CHIP	C57BL/6 heart embryo (15.5 days)	H3K4me2
+757	CHIP	C57BL/6 heart embryo (13.5 days)	H3K27me3
+758	CHIP	C57BL/6 embryonic facial prominence embryo (15.5 days)	H3K27ac
+759	CHIP	C57BL/6 lung embryo (16.5 days)	H3K4me1
+760	CHIP	C57BL/6 intestine postnatal (0 days)	H3K27me3
+761	CHIP	C57BL/6 midbrain postnatal (0 days)	H3K4me1
+762	CHIP	129 E14TG2a.4	POU5F1
+763	CHIP	C57BL/6 liver embryo (14.5 days)	CTCF
+764	CHIP	C57BL/6 lung embryo (15.5 days)	H3K4me2
+765	CHIP	C57BL/6 kidney embryo (14.5 days)	H3K27me3
+766	CHIP	C57BL/6 forebrain embryo (11.5 days)	H3K9ac
+767	CHIP	C57BL/6 embryonic facial prominence embryo (11.5 days)	H3K27ac
+768	CHIP	C57BL/6 forebrain embryo (15.5 days)	H3K4me2
+769	CHIP	C57BL/6 kidney embryo (14.5 days)	H3K9me3
+770	CHIP	C57BL/6 heart embryo (12.5 days)	H3K4me2
+771	CHIP	C57BL/6 embryonic facial prominence embryo (11.5 days)	H3K4me2
+772	CHIP	C57BL/6 intestine embryo (15.5 days)	H3K4me3
+773	CHIP	C57BL/6 intestine embryo (15.5 days)	H3K9ac
+774	CHIP	C57BL/6 stomach embryo (15.5 days)	H3K4me2
+775	CHIP	C57BL/6 limb embryo (13.5 days)	H3K4me3
+776	CHIP	C57BL/6 hindbrain embryo (14.5 days)	H3K4me1
+777	CHIP	C57BL/6 lung postnatal (0 days)	CTCF
+778	CHIP	C57BL/6 liver embryo (11.5 days)	H3K4me1
+779	CHIP	C57BL/6 embryonic facial prominence embryo (13.5 days)	H3K27ac
+780	CHIP	C57BL/6 intestine embryo (14.5 days)	H3K27ac
+781	CHIP	C57BL/6 kidney embryo (14.5 days)	H3K36me3
+782	CHIP	C57BL/6 limb embryo (13.5 days)	H3K4me1
+783	CHIP	C57BL/6 neural tube embryo (11.5 days)	H3K4me3
+784	CHIP	C57BL/6 midbrain postnatal (0 days)	H3K4me3
+785	CHIP	C57BL/6 hindbrain embryo (16.5 days)	H3K9me3
+786	CHIP	C57BL/6 midbrain embryo (15.5 days)	H3K27ac
+787	CHIP	C57BL/6 forebrain embryo (16.5 days)	H3K27ac
+788	CHIP	C57BL/6 lung embryo (16.5 days)	H3K9ac
+789	CHIP	C57BL/6 liver embryo (14.5 days)	H3K4me3
+790	CHIP	C57BL/6 kidney embryo (15.5 days)	H3K4me1
+791	CHIP	C57BL/6 heart embryo (15.5 days)	H3K27me3
+792	CHIP	C57BL/6 forebrain embryo (15.5 days)	H3K36me3
+793	CHIP	C57BL/6 heart embryo (12.5 days)	H3K4me1
+794	CHIP	C57BL/6 neural tube embryo (11.5 days)	H3K36me3
+795	CHIP	C57BL/6 embryonic facial prominence embryo (13.5 days)	H3K36me3
+796	CHIP	C57BL/6 liver embryo (11.5 days)	H3K4me3
+797	CHIP	C57BL/6 neural tube embryo (11.5 days)	H3K4me1
+798	CHIP	C57BL/6 midbrain embryo (15.5 days)	H3K4me1
+799	CHIP	C57BL/6 midbrain embryo (11.5 days)	H3K4me1
+800	CHIP	C57BL/6 stomach postnatal (0 days)	EP300
+801	CHIP	C57BL/6 lung embryo (14.5 days)	H3K27ac
+802	CHIP	C57BL/6 heart embryo (10.5 days)	H3K9me3
+803	CHIP	C57BL/6 kidney embryo (15.5 days)	H3K36me3
+804	CHIP	C57BL/6 embryonic facial prominence embryo (14.5 days)	H3K27me3
+805	CHIP	C57BL/6 liver embryo (16.5 days)	H3K4me2
+806	CHIP	C57BL/6 hindbrain postnatal (0 days)	H3K36me3
+807	CHIP	C57BL/6 limb embryo (13.5 days)	H3K9ac
+808	CHIP	C57BL/6 forebrain embryo (16.5 days)	H3K4me2
+809	CHIP	C57BL/6 heart embryo (11.5 days)	H3K9me3
+810	CHIP	C57BL/6 intestine embryo (14.5 days)	H3K4me3
+811	CHIP	C57BL/6 forebrain postnatal (0 days)	H3K4me1
+812	CHIP	C57BL/6 midbrain embryo (16.5 days)	H3K27me3
+813	CHIP	C57BL/6 neural tube embryo (11.5 days)	H3K9me3
+814	CHIP	C57BL/6 heart embryo (16.5 days)	H3K36me3
+815	CHIP	C57BL/6 liver embryo (12.5 days)	H3K4me3
+816	CHIP	C57BL/6 hindbrain postnatal (0 days)	H3K4me3
+817	CHIP	C57BL/6 liver embryo (15.5 days)	H3K27ac
+818	CHIP	C57BL/6 embryonic facial prominence embryo (14.5 days)	H3K27ac
+819	CHIP	C57BL/6 stomach embryo (15.5 days)	H3K9ac
+820	CHIP	C57BL/6 intestine postnatal (0 days)	H3K36me3
+821	CHIP	C57BL/6 intestine embryo (14.5 days)	H3K4me2
+822	CHIP	C57BL/6 midbrain embryo (15.5 days)	H3K4me3
+823	CHIP	C57BL/6 liver embryo (16.5 days)	H3K4me1
+824	CHIP	C57BL/6 midbrain embryo (15.5 days)	H3K36me3
+825	CHIP	C57BL/6 limb embryo (12.5 days)	H3K4me2
+826	CHIP	C57BL/6 heart postnatal (0 days)	H3K4me1
+827	CHIP	C57BL/6 neural tube embryo (11.5 days)	H3K4me2
+828	CHIP	C57BL/6 heart postnatal (0 days)	CTCF
+829	CHIP	C57BL/6 forebrain embryo (13.5 days)	H3K4me1
+830	CHIP	C57BL/6 kidney postnatal (0 days)	H3K9me3
+831	CHIP	C57BL/6 kidney embryo (15.5 days)	H3K9me3
+832	CHIP	C57BL/6 heart embryo (13.5 days)	H3K4me3
+833	CHIP	C57BL/6 midbrain embryo (11.5 days)	H3K9ac
+834	CHIP	C57BL/6 hindbrain embryo (12.5 days)	H3K36me3
+835	CHIP	C57BL/6 liver embryo (15.5 days)	H3K36me3
+836	CHIP	C57BL/6 neural tube embryo (14.5 days)	H3K9ac
+837	CHIP	C57BL/6 embryonic facial prominence embryo (11.5 days)	H3K4me1
+838	CHIP	C57BL/6 intestine embryo (16.5 days)	H3K27me3
+839	CHIP	C57BL/6 stomach postnatal (0 days)	H3K36me3
+840	CHIP	C57BL/6 kidney postnatal (0 days)	H3K4me2
+841	CHIP	C57BL/6 neural tube embryo (15.5 days)	H3K4me2
+842	CHIP	C57BL/6 heart postnatal (0 days)	H3K9ac
+843	CHIP	C57BL/6 stomach embryo (15.5 days)	H3K4me3
+844	CHIP	C57BL/6 lung postnatal (0 days)	H3K4me1
+845	CHIP	C57BL/6 midbrain embryo (15.5 days)	H3K4me2
+846	CHIP	C57BL/6 embryonic facial prominence embryo (11.5 days)	H3K9me3
+847	CHIP	C57BL/6 lung postnatal (0 days)	EP300
+848	CHIP	C57BL/6 forebrain embryo (12.5 days)	H3K4me3
+849	CHIP	C57BL/6 limb embryo (14.5 days)	H3K4me1
+850	CHIP	129 ES-E14	CHD2
+851	CHIP	C57BL/6 neural tube embryo (11.5 days)	H3K27ac
+852	CHIP	C57BL/6 heart embryo (14.5 days)	H3K4me2
+853	CHIP	C57BL/6 midbrain embryo (11.5 days)	H3K36me3
+854	CHIP	C57BL/6 kidney postnatal (0 days)	H3K4me3
+855	CHIP	C57BL/6 hindbrain embryo (12.5 days)	H3K4me2
+856	CHIP	C57BL/6 embryonic facial prominence embryo (10.5 days)	H3K36me3
+857	CHIP	C57BL/6 neural tube embryo (12.5 days)	H3K4me3
+858	CHIP	C57BL/6 midbrain embryo (11.5 days)	H3K27me3
+859	CHIP	C57BL/6 stomach embryo (16.5 days)	H3K27ac
+860	CHIP	C57BL/6 neural tube embryo (11.5 days)	H3K9ac
+861	CHIP	C57BL/6 limb embryo (11.5 days)	H3K4me1
+862	CHIP	C57BL/6 stomach embryo (15.5 days)	H3K4me1
+863	CHIP	C57BL/6 neural tube embryo (15.5 days)	H3K9me3
+864	CHIP	C57BL/6 liver embryo (13.5 days)	H3K27me3
+865	CHIP	C57BL/6 midbrain embryo (16.5 days)	H3K27ac
+866	CHIP	C57BL/6 midbrain embryo (12.5 days)	H3K4me3
+867	CHIP	C57BL/6 stomach postnatal (0 days)	H3K9me3
+868	CHIP	C57BL/6 forebrain embryo (14.5 days)	H3K4me1
+869	CHIP	C57BL/6 heart embryo (12.5 days)	H3K9me3
+870	CHIP	C57BL/6 forebrain embryo (10.5 days)	H3K36me3
+871	CHIP	C57BL/6 heart embryo (15.5 days)	H3K36me3
+872	CHIP	C57BL/6 kidney postnatal (0 days)	H3K27me3
+873	CHIP	C57BL/6 forebrain embryo (15.5 days)	H3K27me3
+874	CHIP	C57BL/6 liver embryo (16.5 days)	H3K36me3
+875	CHIP	C57BL/6 kidney embryo (14.5 days)	H3K9ac
+876	CHIP	C57BL/6 liver embryo (15.5 days)	H3K27me3
+877	CHIP	C57BL/6 neural tube embryo (15.5 days)	H3K9ac
+878	CHIP	C57BL/6 midbrain embryo (16.5 days)	H3K9me3
+879	CHIP	C57BL/6 intestine embryo (16.5 days)	H3K4me3
+880	CHIP	C57BL/6 heart embryo (15.5 days)	H3K27ac
+881	CHIP	C57BL/6 hindbrain embryo (12.5 days)	H3K9ac
+882	CHIP	C57BL/6 liver embryo (15.5 days)	H3K4me3
+883	CHIP	C57BL/6 liver postnatal (0 days)	H3K4me2
+884	CHIP	C57BL/6 neural tube embryo (14.5 days)	H3K4me2
+885	CHIP	C57BL/6 lung embryo (16.5 days)	H3K9me3
+886	CHIP	C57BL/6 neural tube embryo (13.5 days)	H3K27me3
+887	CHIP	C57BL/6 midbrain embryo (10.5 days)	H3K4me3
+888	CHIP	C57BL/6 stomach embryo (14.5 days)	H3K36me3
+889	CHIP	C57BL/6 embryonic facial prominence embryo (12.5 days)	H3K36me3
+890	CHIP	C57BL/6 heart embryo (10.5 days)	H3K27ac
+891	CHIP	C57BL/6 heart embryo (11.5 days)	H3K4me3
+892	CHIP	C57BL/6 hindbrain embryo (10.5 days)	H3K27ac
+893	CHIP	C57BL/6 intestine embryo (15.5 days)	H3K27ac
+894	CHIP	C57BL/6 stomach embryo (15.5 days)	H3K36me3
+895	CHIP	C57BL/6 intestine embryo (15.5 days)	H3K4me2
+896	CHIP	C57BL/6 embryonic facial prominence embryo (14.5 days)	H3K36me3
+897	CHIP	129 ES-E14	MAFK
+898	CHIP	C57BL/6 embryonic facial prominence embryo (15.5 days)	H3K36me3
+899	CHIP	C57BL/6 liver embryo (12.5 days)	H3K9ac
+900	CHIP	C57BL/6 kidney embryo (16.5 days)	H3K27me3
+901	CHIP	C57BL/6 hindbrain embryo (10.5 days)	H3K4me1
+902	CHIP	C57BL/6 liver postnatal (0 days)	H3K27ac
+903	CHIP	C57BL/6 hindbrain postnatal (0 days)	H3K4me1
+904	CHIP	C57BL/6 limb embryo (12.5 days)	H3K9ac
+905	CHIP	C57BL/6 stomach embryo (16.5 days)	H3K9me3
+906	CHIP	C57BL/6 heart embryo (11.5 days)	H3K36me3
+907	CHIP	C57BL/6 limb embryo (14.5 days)	H3K4me2
+908	CHIP	C57BL/6 forebrain embryo (12.5 days)	H3K9me3
+909	CHIP	C57BL/6 midbrain embryo (16.5 days)	H3K4me3
+910	CHIP	C57BL/6 intestine embryo (16.5 days)	H3K27ac
+911	CHIP	C57BL/6 limb embryo (13.5 days)	H3K36me3
+912	CHIP	C57BL/6 hindbrain embryo (15.5 days)	H3K9ac
+913	CHIP	C57BL/6 heart embryo (14.5 days)	H3K36me3
+914	CHIP	C57BL/6 intestine postnatal (0 days)	H3K27ac
+915	CHIP	C57BL/6 liver embryo (12.5 days)	H3K27me3
+916	CHIP	C57BL/6 embryonic facial prominence embryo (12.5 days)	H3K4me1
+917	CHIP	C57BL/6 heart embryo (15.5 days)	H3K4me3
+918	CHIP	C57BL/6 heart embryo (13.5 days)	H3K4me2
+919	CHIP	C57BL/6 liver postnatal (0 days)	H3K4me3
+920	CHIP	C57BL/6 limb embryo (11.5 days)	H3K4me3
+921	CHIP	C57BL/6 liver postnatal (0 days)	H3K36me3
+922	CHIP	C57BL/6 forebrain embryo (16.5 days)	H3K27me3
+923	CHIP	C57BL/6 kidney embryo (14.5 days)	H3K4me2
+924	CHIP	C57BL/6 heart embryo (13.5 days)	H3K4me1
+925	CHIP	C57BL/6 forebrain embryo (15.5 days)	H3K9me3
+926	CHIP	C57BL/6 kidney embryo (14.5 days)	H3K4me3
+927	CHIP	C57BL/6 liver embryo (14.5 days)	H3K36me3
+928	CHIP	C57BL/6 midbrain embryo (13.5 days)	H3K27ac
+929	CHIP	C57BL/6 intestine postnatal (0 days)	H3K9me3
+930	CHIP	C57BL/6 midbrain postnatal (0 days)	H3K27ac
+931	CHIP	C57BL/6 kidney postnatal (0 days)	H3K4me1
+932	CHIP	C57BL/6 heart postnatal (0 days)	H3K27ac
+933	CHIP	C57BL/6 forebrain postnatal (0 days)	CTCF
+934	CHIP	C57BL/6 lung embryo (14.5 days)	CTCF
+935	CHIP	C57BL/6 midbrain embryo (16.5 days)	H3K4me1
+936	CHIP	C57BL/6 stomach embryo (16.5 days)	H3K4me3
+937	CHIP	C57BL/6 heart embryo (12.5 days)	H3K4me3
+938	CHIP	C57BL/6 hindbrain embryo (14.5 days)	H3K9me3
+939	CHIP	C57BL/6 forebrain embryo (15.5 days)	H3K27ac
+940	CHIP	C57BL/6 liver embryo (11.5 days)	H3K4me2
+941	CHIP	C57BL/6 hindbrain embryo (11.5 days)	H3K4me1
+942	CHIP	C57BL/6 intestine embryo (14.5 days)	H3K9me3
+943	CHIP	C57BL/6 heart embryo (13.5 days)	H3K27ac
+944	CHIP	C57BL/6 embryonic facial prominence embryo (11.5 days)	H3K27me3
+945	CHIP	C57BL/6 midbrain embryo (14.5 days)	H3K36me3
+946	CHIP	C57BL/6 hindbrain embryo (10.5 days)	H3K9me3
+947	CHIP	C57BL/6 neural tube embryo (13.5 days)	H3K4me3
+948	CHIP	DBA/2 MEL cell line	USF1
+949	CHIP	C57BL/6 midbrain embryo (13.5 days)	H3K4me2
+950	CHIP	C57BL/6 embryonic facial prominence embryo (14.5 days)	H3K9me3
+951	CHIP	C57BL/6 midbrain embryo (12.5 days)	H3K4me2
+952	CHIP	C57BL/6 limb embryo (13.5 days)	H3K27me3
+953	CHIP	C57BL/6 kidney embryo (15.5 days)	H3K27ac
+954	CHIP	C57BL/6 forebrain embryo (15.5 days)	H3K9ac
+955	CHIP	C57BL/6 hindbrain embryo (16.5 days)	H3K9ac
+956	CHIP	C57BL/6 hindbrain postnatal (0 days)	H3K9ac
+957	CHIP	C57BL/6 hindbrain embryo (10.5 days)	H3K4me3
+958	CHIP	C57BL/6 liver embryo (13.5 days)	H3K4me2
+959	CHIP	C57BL/6 hindbrain embryo (11.5 days)	H3K9ac
+960	CHIP	C57BL/6 forebrain embryo (10.5 days)	H3K27me3
+961	CHIP	C57BL/6 forebrain embryo (13.5 days)	H3K27me3
+962	CHIP	C57BL/6 forebrain embryo (10.5 days)	H3K9me3
+963	CHIP	C57BL/6 limb embryo (12.5 days)	H3K27ac
+964	CHIP	C57BL/6 forebrain embryo (11.5 days)	H3K4me3
+965	CHIP	C57BL/6 kidney embryo (15.5 days)	H3K27me3
+966	CHIP	B10.H-2aH-4bp/Wts CH12.LX	IRF4
+967	CHIP	C57BL/6 lung embryo (15.5 days)	H3K9ac
+968	CHIP	C57BL/6 heart embryo (16.5 days)	H3K4me2
+969	CHIP	C57BL/6 midbrain embryo (10.5 days)	H3K36me3
+970	CHIP	C57BL/6 heart embryo (11.5 days)	H3K4me2
+971	CHIP	C57BL/6 intestine embryo (16.5 days)	H3K9ac
+972	CHIP	C57BL/6 limb embryo (12.5 days)	H3K4me1
+973	CHIP	C57BL/6 heart embryo (11.5 days)	H3K9ac
+974	CHIP	C57BL/6 midbrain embryo (13.5 days)	H3K9me3
+975	CHIP	C57BL/6 embryonic facial prominence embryo (15.5 days)	H3K9ac
+976	CHIP	C57BL/6 midbrain embryo (14.5 days)	H3K4me2
+977	CHIP	C57BL/6 lung embryo (16.5 days)	H3K27me3
+978	CHIP	C57BL/6 embryonic facial prominence embryo (13.5 days)	H3K4me2
+979	CHIP	C57BL/6 limb embryo (13.5 days)	H3K4me2
+980	CHIP	C57BL/6 midbrain embryo (12.5 days)	H3K36me3
+981	CHIP	C57BL/6 embryonic facial prominence embryo (10.5 days)	H3K4me3
+982	CHIP	C57BL/6 liver postnatal (0 days)	EP300
+983	CHIP	C57BL/6 limb embryo (14.5 days)	H3K27me3
+984	CHIP	C57BL/6 midbrain embryo (12.5 days)	H3K9me3
+985	CHIP	C57BL/6 midbrain embryo (10.5 days)	H3K9me3
+986	CHIP	C57BL/6 liver embryo (12.5 days)	H3K4me1
+987	CHIP	C57BL/6 hindbrain postnatal (0 days)	H3K4me2
+988	CHIP	C57BL/6 lung embryo (15.5 days)	H3K9me3
+989	CHIP	C57BL/6 neural tube embryo (14.5 days)	H3K36me3
+990	CHIP	C57BL/6 lung embryo (15.5 days)	H3K36me3
+991	CHIP	C57BL/6 heart postnatal (0 days)	EP300
+992	CHIP	129 E14TG2a.4	NANOG
+993	CHIP	C57BL/6 embryonic facial prominence embryo (10.5 days)	H3K9me3
+994	CHIP	C57BL/6 embryonic facial prominence embryo (13.5 days)	H3K9ac
+995	CHIP	C57BL/6 heart embryo (16.5 days)	H3K27me3
+996	CHIP	C57BL/6 heart embryo (10.5 days)	H3K4me3
+997	CHIP	C57BL/6 heart embryo (10.5 days)	H3K4me1
+998	CHIP	C57BL/6 forebrain embryo (12.5 days)	H3K4me2
+999	CHIP	C57BL/6 hindbrain embryo (12.5 days)	H3K27ac
+1000	CHIP	C57BL/6 heart postnatal (0 days)	H3K27me3
+1001	CHIP	C57BL/6 liver embryo (16.5 days)	H3K9ac
+1002	CHIP	C57BL/6 hindbrain embryo (16.5 days)	H3K27ac
+1003	CHIP	C57BL/6 stomach embryo (16.5 days)	H3K9ac
+1004	CHIP	C57BL/6 liver embryo (16.5 days)	H3K27ac
+1005	CHIP	B10.H-2aH-4bp/Wts CH12.LX	MEF2A
+1006	CHIP	C57BL/6 hindbrain embryo (15.5 days)	H3K36me3
+1007	CHIP	C57BL/6 limb embryo (15.5 days)	H3K4me1
+1008	CHIP	C57BL/6 embryonic facial prominence embryo (12.5 days)	H3K27ac
+1009	CHIP	C57BL/6 kidney embryo (16.5 days)	H3K9me3
+1010	CHIP	C57BL/6 lung embryo (14.5 days)	H3K4me1
+1011	CHIP	C57BL/6 forebrain embryo (10.5 days)	H3K27ac
+1012	CHIP	C57BL/6 neural tube embryo (15.5 days)	H3K4me1
+1013	CHIP	C57BL/6 intestine embryo (16.5 days)	H3K4me1
+1014	CHIP	C57BL/6 hindbrain embryo (15.5 days)	H3K4me2
+1015	CHIP	C57BL/6 forebrain embryo (14.5 days)	H3K27me3
+1016	CHIP	C57BL/6 forebrain embryo (13.5 days)	H3K4me3
+1017	CHIP	C57BL/6 hindbrain embryo (13.5 days)	H3K27me3
+1018	CHIP	C57BL/6 lung embryo (14.5 days)	H3K4me3
+1019	CHIP	C57BL/6 heart embryo (12.5 days)	H3K36me3
+1020	CHIP	C57BL/6 heart embryo (16.5 days)	H3K27ac
+1021	CHIP	C57BL/6 liver embryo (11.5 days)	H3K9me3
+1022	CHIP	C57BL/6 kidney embryo (16.5 days)	H3K4me2
+1023	CHIP	C57BL/6 liver embryo (15.5 days)	H3K9me3
+1024	CHIP	C57BL/6 midbrain embryo (15.5 days)	H3K27me3
+1025	CHIP	129 E14TG2a.4	H3K9me3
+1026	CHIP	C57BL/6 lung embryo (15.5 days)	H3K4me1
+1027	CHIP	C57BL/6 lung embryo (15.5 days)	H3K27me3
+1028	CHIP	C57BL/6 limb embryo (10.5 days)	H3K27ac
+1029	CHIP	C57BL/6 midbrain embryo (15.5 days)	H3K9me3
+1030	CHIP	C57BL/6 hindbrain embryo (16.5 days)	H3K36me3
+1031	CHIP	C57BL/6 liver embryo (13.5 days)	H3K9ac
+1032	CHIP	C57BL/6 limb embryo (14.5 days)	H3K36me3
+1033	CHIP	C57BL/6 intestine embryo (15.5 days)	H3K27me3
+1034	CHIP	C57BL/6 limb embryo (11.5 days)	H3K36me3
+1035	CHIP	C57BL/6 stomach embryo (16.5 days)	H3K36me3
+1036	CHIP	C57BL/6 forebrain embryo (15.5 days)	H3K4me1
+1037	CHIP	C57BL/6 heart postnatal (0 days)	H3K4me3
+1038	CHIP	C57BL/6 kidney embryo (16.5 days)	H3K4me1
+1039	CHIP	C57BL/6 lung postnatal (0 days)	H3K27ac
+1040	CHIP	C57BL/6 embryonic facial prominence embryo (14.5 days)	H3K4me2
+1041	CHIP	C57BL/6 heart embryo (11.5 days)	H3K4me1
+1042	CHIP	C57BL/6 liver embryo (15.5 days)	H3K9ac
+1043	CHIP	C57BL/6 neural tube embryo (12.5 days)	H3K27ac
+1044	CHIP	C57BL/6 forebrain embryo (11.5 days)	H3K9me3
+1045	CHIP	C57BL/6 lung embryo (15.5 days)	H3K27ac
+1046	CHIP	C57BL/6 limb embryo (11.5 days)	H3K27ac
+1047	CHIP	C57BL/6 liver embryo (14.5 days)	H3K9ac
+1048	CHIP	C57BL/6 limb embryo (13.5 days)	H3K27ac
+1049	CHIP	B10.H-2aH-4bp/Wts CH12.LX	TCF12
+1050	CHIP	C57BL/6 limb embryo (10.5 days)	H3K27me3
+1051	CHIP	C57BL/6 forebrain postnatal (0 days)	H3K4me2
+1052	CHIP	C57BL/6 stomach embryo (16.5 days)	H3K4me1
+1053	CHIP	C57BL/6 kidney embryo (16.5 days)	H3K9ac
+1054	CHIP	C57BL/6 embryonic facial prominence embryo (10.5 days)	H3K4me1
+1055	CHIP	C57BL/6 stomach postnatal (0 days)	H3K4me3
+1056	CHIP	C57BL/6 neural tube embryo (13.5 days)	H3K4me1
+1057	CHIP	C57BL/6 intestine embryo (15.5 days)	H3K36me3
+1058	CHIP	C57BL/6 hindbrain embryo (15.5 days)	H3K4me1
+1059	CHIP	C57BL/6 lung embryo (14.5 days)	H3K4me2
+1060	CHIP	C57BL/6 hindbrain embryo (11.5 days)	H3K4me3
+1061	CHIP	C57BL/6 neural tube embryo (15.5 days)	H3K27me3
+1062	CHIP	C57BL/6 midbrain embryo (14.5 days)	H3K27me3
+1063	CHIP	C57BL/6 stomach embryo (15.5 days)	H3K27ac
+1064	CHIP	C57BL/6 neural tube embryo (12.5 days)	H3K9me3
+1065	CHIP	C57BL/6 liver embryo (11.5 days)	H3K36me3
+1066	CHIP	C57BL/6 limb embryo (12.5 days)	H3K4me3
+1067	CHIP	C57BL/6 stomach postnatal (0 days)	H3K4me1
+1068	CHIP	C57BL/6 limb embryo (12.5 days)	H3K9me3
+1069	CHIP	C57BL/6 forebrain embryo (11.5 days)	H3K27me3
+1070	CHIP	C57BL/6 stomach embryo (16.5 days)	H3K27me3
+1071	CHIP	C57BL/6 intestine postnatal (0 days)	H3K9ac
+1072	CHIP	C57BL/6 hindbrain embryo (13.5 days)	H3K4me2
+1073	CHIP	C57BL/6 liver embryo (11.5 days)	H3K9ac
+1074	CHIP	C57BL/6 midbrain embryo (14.5 days)	H3K9me3
+1075	CHIP	C57BL/6 midbrain postnatal (0 days)	H3K36me3
+1076	CHIP	C57BL/6 kidney embryo (16.5 days)	H3K4me3
+1077	CHIP	C57BL/6 intestine embryo (14.5 days)	H3K36me3
+1078	CHIP	C57BL/6 hindbrain embryo (14.5 days)	H3K27me3
+1079	CHIP	C57BL/6 heart embryo (15.5 days)	H3K9ac
+1080	CHIP	C57BL/6 limb embryo (11.5 days)	H3K9me3
+1081	CHIP	C57BL/6 kidney embryo (15.5 days)	H3K9ac
+1082	CHIP	C57BL/6 hindbrain embryo (10.5 days)	H3K36me3
+1083	CHIP	C57BL/6 heart embryo (11.5 days)	H3K27me3
+1084	CHIP	C57BL/6 embryonic facial prominence embryo (14.5 days)	H3K9ac
+1085	CHIP	C57BL/6 heart postnatal (0 days)	H3K9me3
+1086	CHIP	C57BL/6 forebrain embryo (12.5 days)	H3K27ac
+1087	CHIP	C57BL/6 liver postnatal (0 days)	H3K9ac
+1088	CHIP	C57BL/6 midbrain embryo (10.5 days)	H3K27me3
+1089	CHIP	C57BL/6 heart embryo (12.5 days)	H3K9ac
+1090	CHIP	C57BL/6 stomach postnatal (0 days)	H3K27me3
+1091	CHIP	C57BL/6 lung embryo (16.5 days)	H3K36me3
+1092	CHIP	C57BL/6 hindbrain embryo (12.5 days)	H3K9me3
+1093	CHIP	DBA/2 MEL cell line	H3K36me3
+1094	CHIP	C57BL/6 hindbrain embryo (13.5 days)	H3K36me3
+1095	CHIP	C57BL/6 embryonic facial prominence embryo (14.5 days)	H3K4me1
+1096	CHIP	C57BL/6 neural tube embryo (13.5 days)	H3K4me2
+1097	CHIP	B10.H-2aH-4bp/Wts CH12.LX	USF1
+1098	CHIP	C57BL/6 liver postnatal (0 days)	H3K27me3
+1099	CHIP	C57BL/6 stomach embryo (15.5 days)	H3K9me3
+1100	CHIP	C57BL/6 forebrain embryo (11.5 days)	H3K4me1
+1101	CHIP	C57BL/6 stomach embryo (14.5 days)	H3K9me3
+1102	CHIP	C57BL/6 neural tube embryo (14.5 days)	H3K4me1
+1103	CHIP	B10.H-2aH-4bp/Wts CH12.LX	NRF1
+1104	CHIP	C57BL/6 liver embryo (14.5 days)	EP300
+1105	CHIP	C57BL/6 hindbrain embryo (10.5 days)	H3K27me3
+1106	CHIP	C57BL/6 liver embryo (13.5 days)	H3K4me3
+1107	CHIP	C57BL/6 midbrain postnatal (0 days)	CTCF
+1108	CHIP	C57BL/6 limb embryo (15.5 days)	H3K27ac
+1109	CHIP	C57BL/6 midbrain embryo (10.5 days)	H3K27ac
+1110	CHIP	C57BL/6 embryonic facial prominence embryo (15.5 days)	H3K4me3
+1111	CHIP	C57BL/6 forebrain embryo (10.5 days)	H3K4me1
+1112	CHIP	CEBPB_ChIP-seq / CEBPB_ChIP-seq / Primary dermal fibroblasts	CEBPb
+1113	CHIP	CEBPB_Tg_ChIP-seq / CEBPB_Tg_ChIP-seq / Primary dermal fibroblasts	CEBPb
+1114	CHIP	ATF4_ChIP-seq / ATF4_ChIP-seq / Primary dermal fibroblasts	ATF4
+1115	CHIP	SREBP1 (ZT02) / SREBP1_ZT02, liver cells / .	SREBP1
+1116	CHIP	SREBP1 (ZT06) / SREBP1_ZT06, liver cells / .	SREBP1
+1117	CHIP	SREBP1 (ZT10) / SREBP1_ZT10, liver cells / .	SREBP1
+1118	CHIP	SREBP1 (ZT14) / SREBP1_ZT14, liver cells / .	SREBP1
+1119	CHIP	SREBP1 (ZT18) / SREBP1_ZT18, liver cells / .	SREBP1
+1120	CHIP	SREBP1 (ZT22) / SREBP1_ZT22, liver cells / .	SREBP1
+1121	CHIP	Polr2b (ZT02) / RPB2_ZT02, liver cells / .	RPB2
+1122	CHIP	Polr2b (ZT06) / RPB2_ZT06, liver cells / .	RPB2
+1123	CHIP	Polr2b (ZT10) / RPB2_ZT10, liver cells / .	RPB2
+1124	CHIP	Polr2b (ZT14) / RPB2_ZT14, liver cells / .	RPB2
+1125	CHIP	Polr2b (ZT18) / RPB2_ZT18, liver cells / .	RPB2
+1126	CHIP	Polr2b (ZT22) / RPB2_ZT22, liver cells / .	RPB2
+1127	CHIP	H3K9ac ChIPSeq Cre_cohort1 / H3K9ac ChIPSeq Cre_cohort1 / .	H3K9ac
+1128	CHIP	H3K9ac ChIPSeq WT_cohort1 / H3K9ac ChIPSeq WT_cohort1 / .	H3K9ac
+1129	CHIP	H3K9ac ChIPSeq HAHA_cohort1 / H3K9ac ChIPSeq HAHA_cohort1 / .	H3K9ac
+1130	CHIP	H3K9ac ChIPSeq KA_cohort1 / H3K9ac ChIPSeq KA_cohort1 / .	H3K9ac
+1131	CHIP	H3K9ac ChIPSeq YF_cohort2 / H3K9ac ChIPSeq YF_cohort2 / .	H3K9ac
+1132	CHIP	H3K9ac ChIPSeq HEBI_cohort2 / H3K9ac ChIPSeq HEBI_cohort2 / .	H3K9ac
+1133	CHIP	SMRT ChIPSeq 5PM (ZT10) / liver / .	SMRT
+1134	CHIP	SMRT ChIPSeq 5AM (ZT22) / liver / .	SMRT
+1135	CHIP	ZT8 CLOCK ChIP Seq-1 / Liver / .	CLOCK
+1136	CHIP	ZT8 BMAL1 ChIP Seq-1 / Liver / .	BMAL1
+1137	CHIP	ZT20 CRY1 ChIP Seq / Liver / .	CRY1
+1138	CHIP	E4BP4 Liver ZT22 ChIP-seq / liver / .	E4BP4
+1139	CHIP	RORalpha Liver ZT22 ChIP-seq / liver / .	RORalpha
+1140	CHIP	ChIP-seq, Liver_GR_GRdim_6am / Liver tissue / .	GR
+1141	CHIP	ChIP-seq, Liver_GR_GRdim_6pm / Liver tissue / .	GR
+1142	CHIP	ChIP-seq, Liver_GR_GRdim_pred_6am / Liver tissue / .	GR
+1143	CHIP	ChIP-seq, Liver_GR_WT_6am / Liver tissue / .	GR
+1144	CHIP	ChIP-seq, Liver_GR_WT_6pm / Liver tissue / .	GR
+1145	CHIP	ChIP-seq, Liver_GR_WT_pred_6am / Liver tissue / .	GR
+1146	CHIP	ChIP-seq, Liver_RNAPII_WT_6am / Liver tissue / .	RNAPII
+1147	CHIP	ChIP-seq, Liver_RNAPII_WT_pred_6am / Liver tissue / .	RNAPII
+1148	CHIP	ChIP-seq, Liver_CEBPb_WT_6pm / Liver tissue / .	CEBPb
+1149	CHIP	ChIP-exo, Liver_GR_GRdim_6am / Liver tissue / .	GR
+1150	CHIP	ChIP-exo, Liver_GR_GRdim_6pm / Liver tissue / .	GR
+1151	CHIP	ChIP-exo, Liver_GR_GRdim_pred_6am / Liver tissue / .	GR
+1152	CHIP	ChIP-exo, Liver_GR_WT_6am / Liver tissue / .	GR
+1153	CHIP	ChIP-exo, Liver_GR_WT_6pm / Liver tissue / .	GR
+1154	CHIP	ChIP-exo, Liver_GR_WT_pred_6am / Liver tissue / .	GR
+1155	CHIP	PolII ZT 2 WT / Liver, WT, ZT 2, PolII ChIP / .	PolII
+1156	CHIP	PolII ZT 6 WT / Liver, WT, ZT 6, PolII ChIP / .	PolII
+1157	CHIP	PolII ZT 10 WT / Liver, WT, ZT 10, PolII ChIP / .	PolII
+1158	CHIP	PolII ZT 14 WT / Liver, WT, ZT 14, PolII ChIP / .	PolII
+1159	CHIP	PolII ZT 18 WT / Liver, WT, ZT 18, PolII ChIP / .	PolII
+1160	CHIP	PolII ZT 22 WT / Liver, WT, ZT 22, PolII ChIP / .	PolII
+1161	CHIP	PolII ZT 26 WT / Liver, WT, ZT 26, PolII ChIP / .	PolII
+1162	CHIP	PolII ZT 2 Bmal1 KO / Liver, Bmal1 KO, ZT 2, PolII ChIP / .	PolII
+1163	CHIP	PolII ZT 6 Bmal1 KO / Liver, Bmal1 KO, ZT 6, PolII ChIP / .	PolII
+1164	CHIP	PolII ZT 10 Bmal1 KO / Liver, Bmal1 KO, ZT 10, PolII ChIP / .	PolII
+1165	CHIP	PolII ZT 14 Bmal1 KO / Liver, Bmal1 KO, ZT 14, PolII ChIP / .	PolII
+1166	CHIP	PolII ZT 18 Bmal1 KO / Liver, Bmal1 KO, ZT 18, PolII ChIP / .	PolII
+1167	CHIP	PolII ZT 22 Bmal1 KO / Liver, Bmal1 KO, ZT 22, PolII ChIP / .	PolII
+1168	CHIP	PolII ZT 26 Bmal1 KO / Liver, Bmal1 KO, ZT 26, PolII ChIP / .	PolII
+1169	CHIP	H3K27ac ZT 2 WT / Liver, WT, ZT 2, H3K27ac ChIP / .	H3K27ac
+1170	CHIP	H3K27ac ZT 6 WT / Liver, WT, ZT 6, H3K27ac ChIP / .	H3K27ac
+1171	CHIP	H3K27ac ZT 10 WT / Liver, WT, ZT 10, H3K27ac ChIP / .	H3K27ac
+1172	CHIP	H3K27ac ZT 14 WT / Liver, WT, ZT 14, H3K27ac ChIP / .	H3K27ac
+1173	CHIP	H3K27ac ZT 18 WT / Liver, WT, ZT 18, H3K27ac ChIP / .	H3K27ac
+1174	CHIP	H3K27ac ZT 22 WT / Liver, WT, ZT 22, H3K27ac ChIP / .	H3K27ac
+1175	CHIP	H3K27ac ZT 26 WT / Liver, WT, ZT 26, H3K27ac ChIP / .	H3K27ac
+1176	CHIP	H3K27ac ZT 2 Bmal1 KO / Liver, Bmal1 KO, ZT 2, H3K27ac ChIP / .	H3K27ac
+1177	CHIP	H3K27ac ZT 6 Bmal1 KO / Liver, Bmal1 KO, ZT 6, H3K27ac ChIP / .	H3K27ac
+1178	CHIP	H3K27ac ZT 10 Bmal1 KO / Liver, Bmal1 KO, ZT 10, H3K27ac ChIP / .	H3K27ac
+1179	CHIP	H3K27ac ZT 14 Bmal1 KO / Liver, Bmal1 KO, ZT 14, H3K27ac ChIP / .	H3K27ac
+1180	CHIP	H3K27ac ZT 18 Bmal1 KO / Liver, Bmal1 KO, ZT 18, H3K27ac ChIP / .	H3K27ac
+1181	CHIP	H3K27ac ZT 22 Bmal1 KO / Liver, Bmal1 KO, ZT 22, H3K27ac ChIP / .	H3K27ac
+1182	CHIP	H3K27ac ZT 26 Bmal1 KO / Liver, Bmal1 KO, ZT 26, H3K27ac ChIP / .	H3K27ac
+1183	CHIP	ChIP-seq, Liver_CEBPb_WT_6am / Liver tissue / .	CEBPb
+1184	CHIP	ChIP-seq, Liver_CEBPb_WT_pred_6am / Liver tissue / .	CEBPb
+1185	CHIP	Rev-erbalpha_eWAT_ZT10_rep1 / eWAT / .	.
+1186	CHIP	input_eWAT / eWAT / .	.
+1187	CHIP	Rev-erbalpha_brain_ZT10 / brain(ventral tegmental area) / .	.
+1188	CHIP	input_brain / brain(ventral tegmental area) / .	.
+1189	CHIP	Rev-erbalpha_WT_liver_ZT10_rep1 / liver / .	.
+1190	CHIP	Rev-erbalpha_129mice_WT_liver_ZT10_rep1 / liver / .	.
+1191	CHIP	Rev-erbalpha_DBD_mutant_liver_ZT10_rep1 / liver / .	.
+1192	CHIP	RORalpha_liver_ZT10 / liver / .	.
+1193	CHIP	RORgamma_liver_ZT10 / liver / .	.
+1194	CHIP	RORgamma_liver_ZT22 / liver / .	.
+1195	CHIP	HDAC3_liver_reverbGFP_ZT10_rep1 / liver / .	.
+1196	CHIP	HDAC3_liver_Rev-erbsflCRE(DBDm)_ZT10_rep1 / liver / .	.
+1197	CHIP	HDAC3_liver_ZT10 / liver / .	.
+1198	CHIP	HDAC3_liver_reverbalphaKO_betaKD_ZT10 / liver / .	.
+1199	CHIP	HDAC3_KO_liver_ZT10_rep1 / liver / .	.
+1200	CHIP	HSF1 ZT14 / Liver / .	HSF1
+1201	CHIP	Rev-erba ChIP-seq at ZT10 (Wild Type) Replicate 1 / liver / .	Rev-erba
+1202	CHIP	Rev-erba ChIP-seq at ZT10 (HNF6 KO) Replicate 1 / liver / .	Rev-erba
+1203	CHIP	ChIP-seq Rpc4 , ZT02, rep1, CONTROL / Liver / .	.
+1204	CHIP	ChIP-seq Rpc4 , ZT06, rep1, CONTROL / Liver / .	.
+1205	CHIP	ChIP-seq Rpc4 , ZT10, rep1, CONTROL / Liver / .	.
+1206	CHIP	ChIP-seq Rpc4 , ZT14, rep1, CONTROL / Liver / .	.
+1207	CHIP	ChIP-seq Rpc4 , ZT18, rep1, CONTROL / Liver / .	.
+1208	CHIP	ChIP-seq Rpc4 , ZT22, rep1, CONTROL / Liver / .	.
+1209	CHIP	ChIP-seq Rpc4 , ZT02, rep1, CONSTANTLY FED / Liver / .	.
+1210	CHIP	ChIP-seq Rpc4 , ZT06, rep1, CONSTANTLY FED / Liver / .	.
+1211	CHIP	ChIP-seq Rpc4 , ZT10, rep1, CONSTANTLY FED / Liver / .	.
+1212	CHIP	ChIP-seq Rpc4 , ZT14, rep1, CONSTANTLY FED / Liver / .	.
+1213	CHIP	ChIP-seq Rpc4 , ZT18, rep1, CONSTANTLY FED / Liver / .	.
+1214	CHIP	ChIP-seq Rpc4 , ZT22, rep1, CONSTANTLY FED / Liver / .	.
+1215	CHIP	ChIP-seq Rpc4 , ZT26, rep1, CONSTANTLY FED / Liver / .	.
+1216	CHIP	ChIP-seq Rpc4 , ZT02, rep1, Arntl KO / Liver / .	.
+1217	CHIP	ChIP-seq Rpc4 , ZT06, rep1, Arntl KO / Liver / .	.
+1218	CHIP	ChIP-seq Rpc4 , ZT10, rep1, Arntl KO / Liver / .	.
+1219	CHIP	ChIP-seq Rpc4 , ZT14, rep1, Arntl KO / Liver / .	.
+1220	CHIP	ChIP-seq Rpc4 , ZT18, rep1, Arntl KO / Liver / .	.
+1221	CHIP	ChIP-seq Rpc4 , ZT22, rep1, Arntl KO / Liver / .	.
+1222	CHIP	ChIP-seq Rpc4 , ZT02, rep1, Maf1 KO / Liver / .	.
+1223	CHIP	ChIP-seq Rpc4 , ZT06, rep1, Maf1 KO / Liver / .	.
+1224	CHIP	ChIP-seq Rpc4 , ZT10, rep1, Maf1 KO / Liver / .	.
+1225	CHIP	ChIP-seq Rpc4 , ZT14, rep1, Maf1 KO / Liver / .	.
+1226	CHIP	ChIP-seq Rpc4 , ZT18, rep1, Maf1 KO / Liver / .	.
+1227	CHIP	ChIP-seq Rpc4 , ZT22, rep1, Maf1 KO / Liver / .	.
+1228	CHIP	Bmal1_ZT4 control rep1 / gastrocnemius / .	Bmal1
+1229	CHIP	RNAP2_ZT4 control rep1 / gastrocnemius / .	RNA
+1230	CHIP	Reverba_ZT8 control REP1 / gastrocnemius / .	Rev-erba
+1231	CHIP	HDAC3 ChIP at ZT10-1 / Liver / .	.
+1232	CHIP	HDAC3 ChIP at ZT22-1 / Liver / .	.
+1233	CHIP	NCoR ChIP at ZT10 / Liver / .	.
+1234	CHIP	NCoR ChIP at ZT22 / Liver / .	.
+1235	CHIP	Rev-erba ChIP at ZT10 / Liver / .	.
+1236	CHIP	Rev-erba ChIP at ZT22 / Liver / .	.
+1237	CHIP	Pol II ChIP at ZT10 / Liver / .	.
+1238	CHIP	Pol II ChIP at ZT22 / Liver / .	.
+1239	CHIP	H3K9ac at ZT10 / Liver / .	.
+1240	CHIP	H3K9ac at ZT22 / Liver / .	.
+1241	CHIP	H3K9ac in HDAC3 KO liver at ZT10 / Liver / .	.
+1242	CHIP	REV-ERB alpha / liver_REV-ERB alpha_ChIP / .	REV-ERB
+1243	CHIP	REV-ERB beta / liver_REV-ERB beta_ChIP / .	REV-ERB
+1244	CHIP	LXR ChIP WT Bexarotene / C57BL/6 wild type mouse liver / .	.
+1245	CHIP	LXR ChIP WT Control / C57BL/6 wild type mouse liver / .	.
+1246	CHIP	LXR ChIP WT T0901317 / C57BL/6 wild type mouse liver / .	.
+1247	CHIP	PPARalpha ChIP WT Control / C57BL/6 wild type mouse liver / .	.
+1248	CHIP	PPARalpha ChIP LXRdKO Control / C57BL/6 LXRdKO mouse liver / .	.
+1249	CHIP	RXR ChIP WT Bexarotene / C57BL/6 wild type mouse liver / .	.
+1250	CHIP	RXR ChIP WT Control / C57BL/6 wild type mouse liver / .	.
+1251	CHIP	RXR ChIP WT T0901317 / C57BL/6 wild type mouse liver / .	.
+1252	CHIP	RXR ChIP LXRdKO Bexarotene / C57BL/6 LXRdKO mouse liver / .	.
+1253	CHIP	RXR ChIP LXRdKO Control / C57BL/6 LXRdKO mouse liver / .	.
+1254	CHIP	RXR ChIP LXRdKO T0901317 / C57BL/6 LXRdKO mouse liver / .	.
+1255	CHIP	RNAPolII ChIP WT Control replicate 1 / C57BL/6 wild type mouse liver / .	.
+1256	CHIP	RNAPolII ChIP WT Bexarotene replicate 1 / C57BL/6 wild type mouse liver / .	.
+1257	CHIP	RNAPolII ChIP WT T0901317 replicate 1 / C57BL/6 wild type mouse liver / .	.
+1258	CHIP	RNAPolII ChIP LXRdKO Control replicate 1 / C57BL/6 LXRdKO mouse liver / .	.
+1259	CHIP	RNAPolII ChIP LXRdKO Bexarotene replicate 1 / C57BL/6 LXRdKO mouse liver / .	.
+1260	CHIP	RNAPolII ChIP LXRdKO T0901317 replicate 1 / C57BL/6 LXRdKO mouse liver / .	.
+1261	CHIP	Chop+/+ Tm ChIP-seq / Mouse embronic fibroblast / Mouse embryonic fibroblast	CHOP
+1262	CHIP	Chop -/- Tm ChIP-seq / Mouse embronic fibroblast / Mouse embryonic fibroblast	CHOP
+1263	CHIP	Atf4+/+ Tm ChIP-seq / Mouse embronic fibroblast / Mouse embryonic fibroblast	ATF4
+1264	CHIP	Atf4-/ Tm ChIP-seq / Mouse embronic fibroblast / Mouse embryonic fibroblast	ATF4
+1265	CHIP	Polr2b_ZT02 / RPB2 IP / .	RPB2
+1266	CHIP	Polr2b_ZT06 / RPB2 IP / .	RPB2
+1267	CHIP	Polr2b_ZT10 / RPB2 IP / .	RPB2
+1268	CHIP	Polr2b_ZT14 / RPB2 IP / .	RPB2
+1269	CHIP	Polr2b_ZT18 / RPB2 IP / .	RPB2
+1270	CHIP	Polr2b_ZT22 / RPB2 IP / .	RPB2
+1271	CHIP	Polr2b_ZT26 / RPB2 IP / .	RPB2
+1272	CHIP	H3K4me3_ZT02 / H3K4me3 IP / .	H3K4me3
+1273	CHIP	H3K4me3_ZT06 / H3K4me3 IP / .	H3K4me3
+1274	CHIP	H3K4me3_ZT10 / H3K4me3 IP / .	H3K4me3
+1275	CHIP	H3K4me3_ZT14 / H3K4me3 IP / .	H3K4me3
+1276	CHIP	H3K4me3_ZT18 / H3K4me3 IP / .	H3K4me3
+1277	CHIP	H3K4me3_ZT22 / H3K4me3 IP / .	H3K4me3
+1278	CHIP	H3K4me3_ZT26 / H3K4me3 IP / .	H3K4me3
+1279	CHIP	H3K36me3_ZT02 / H3K36me3 IP / .	H3K36me3
+1280	CHIP	H3K36me3_ZT06 / H3K36me3 IP / .	H3K36me3
+1281	CHIP	H3K36me3_ZT10 / H3K36me3 IP / .	H3K36me3
+1282	CHIP	H3K36me3_ZT14 / H3K36me3 IP / .	H3K36me3
+1283	CHIP	H3K36me3_ZT18 / H3K36me3 IP / .	H3K36me3
+1284	CHIP	H3K36me3_ZT22 / H3K36me3 IP / .	H3K36me3
+1285	CHIP	H3K36me3_ZT26 / H3K36me3 IP / .	H3K36me3
+1286	CAGE	placenta, adult pregnant day17	
+1287	CAGE	spleen, adult	
+1288	CAGE	liver, adult pregnant day01	
+1289	CAGE	cecum, adult	
+1290	CAGE	colon, adult	
+1291	CAGE	submandibular gland, adult	
+1292	CAGE	prostate, adult	
+1293	CAGE	thymus, adult	
+1294	CAGE	placenta, adult pregnant day10	
+1295	CAGE	cortex, adult	
+1296	CAGE	lung, adult	
+1297	CAGE	accessory axillary lymph node, adult	
+1298	CAGE	mammary gland, adult pregnant day19	
+1299	CAGE	medulla oblongata, adult	
+1300	CAGE	hippocampus, adult	
+1301	CAGE	mammary gland, adult lactating day02	
+1302	CAGE	urinary bladder, adult	
+1303	CAGE	diencephalon, adult	
+1304	CAGE	bone (os femoris), adult	
+1305	CAGE	eyeball, adult	
+1306	CAGE	pancreas, adult	
+1307	CAGE	corpus striatum, adult	
+1308	CAGE	amnion, adult pregnant day17.5	
+1309	CAGE	olfactory brain, adult	
+1310	CAGE	epididymis, adult	
+1311	CAGE	vesicular gland, adult	
+1312	CAGE	skin, adult	
+1313	CAGE	pituitary gland, adult	
+1314	CAGE	cerebellum, adult	
+1315	CAGE	intestine, adult	
+1316	CAGE	uterus, adult pregnant day19	
+1317	CAGE	aorta, adult	
+1318	CAGE	tongue, adult	
+1319	CAGE	oviduct, adult pregnant day01	
+1320	CAGE	corpora quadrigemina, adult	
+1321	CAGE	vagina, adult	
+1322	CAGE	stomach, adult	
+1323	CAGE	testis, adult	
+1324	CAGE	spinal cord, adult	
+1325	CAGE	intestinal mucosa, adult	
+1326	CAGE	ovary, adult	
+1327	CAGE	adrenal gland, adult	
+1328	CAGE	uterus, adult	
+1329	CAGE	liver, embryo E17	
+1330	CAGE	whole body, embryo E13	
+1331	CAGE	whole body, embryo E17.5	
+1332	CAGE	whole body, embryo E16	
+1333	CAGE	whole body, neonate N06	
+1334	CAGE	whole body, embryo E18	
+1335	CAGE	whole body, embryo E17	
+1336	CAGE	whole body, neonate N10	
+1337	CAGE	whole body, embryo E14	
+1338	CAGE	liver, embryo E15	
+1339	CAGE	eyeball, embryo E14	
+1340	CAGE	lung, embryo E12	
+1341	CAGE	liver, embryo E16	
+1342	CAGE	liver, embryo E13	
+1343	CAGE	whole body, neonate N00	
+1344	CAGE	intestine, embryo E18	
+1345	CAGE	whole body, neonate N01	
+1346	CAGE	forelimb, embryo E14	
+1347	CAGE	whole body, embryo E14.5	
+1348	CAGE	liver, embryo E18	
+1349	CAGE	pancreas, embryo E18	
+1350	CAGE	thymus, embryo E17	
+1351	CAGE	intestine, embryo E17	
+1352	CAGE	lung, embryo E18	
+1353	CAGE	kidney, embryo E16	
+1354	CAGE	intestine, embryo E16	
+1355	CAGE	heart, embryo E11	
+1356	CAGE	whole body, embryo E12	
+1357	CAGE	stomach, embryo E12	
+1358	CAGE	forelimb, embryo E13	
+1359	CAGE	pituitary gland, embryo E15	
+1360	CAGE	eyeball, embryo E15	
+1361	CAGE	liver, embryo E14	
+1362	CAGE	thymus, embryo E18	
+1363	CAGE	forelimb, embryo E11	
+1364	CAGE	heart, embryo E14	
+1365	CAGE	forelimb, embryo E17	
+1366	CAGE	pancreas, embryo E17	
+1367	CAGE	forelimb, embryo E12	
+1368	CAGE	liver, embryo E12	
+1369	CAGE	intestine, embryo E15	
+1370	CAGE	stomach, embryo E15	
+1371	CAGE	lung, embryo E14	
+1372	CAGE	lung, embryo E17	
+1373	CAGE	kidney, embryo E14	
+1374	CAGE	Clontech Mouse Universal Reference Total RNA, pool1	
+1375	CAGE	SABiosciences XpressRef Mouse Universal Total RNA, pool1	
+1376	CAGE	Universal RNA - Mouse Normal Tissues Biochain, pool1	
+1377	CAGE	kidney, embryo E15	
+1378	CAGE	lung, embryo E16	
+1379	CAGE	stomach, embryo E18	
+1380	CAGE	kidney, embryo E18	
+1381	CAGE	thymus, embryo E16	
+1382	CAGE	pancreas, embryo E16	
+1383	CAGE	adrenal gland, embryo E16	
+1384	CAGE	thymus, embryo E15	
+1385	CAGE	stomach, embryo E17	
+1386	CAGE	forelimb, embryo E15	
+1387	CAGE	forelimb, embryo E18	
+1388	CAGE	pituitary gland, embryo E13	
+1389	CAGE	intestine, embryo E13	
+1390	CAGE	spleen, embryo E18	
+1391	CAGE	pancreas, embryo E14	
+1392	CAGE	heart, embryo E13	
+1393	CAGE	whole body, embryo E11	
+1394	CAGE	heart, embryo E12	
+1395	CAGE	eyeball, embryo E12	
+1396	CAGE	heart, embryo E15	
+1397	CAGE	pituitary gland, embryo E12	
+1398	CAGE	intestine, embryo E12	
+1399	CAGE	lung, embryo E15	
+1400	CAGE	heart, embryo E16	
+1401	CAGE	stomach, embryo E16	
+1402	CAGE	eyeball, embryo E17	
+1403	CAGE	heart, embryo E17	
+1404	CAGE	adrenal gland, embryo E18	
+1405	CAGE	testis, embryo E18	
+1406	CAGE	kidney, embryo E17	
+1407	CAGE	testis, embryo E17	
+1408	CAGE	heart, embryo E18	
+1409	CAGE	testis, embryo E13	
+1410	CAGE	testis, embryo E16	
+1411	CAGE	testis, embryo E15	
+1412	CAGE	spleen, embryo E16	
+1413	CAGE	pituitary gland, embryo E16	
+1414	CAGE	pituitary gland, embryo E14	
+1415	CAGE	adrenal gland, embryo E14	
+1416	CAGE	pituitary gland, embryo E17	
+1417	CAGE	ovary, embryo E18	
+1418	CAGE	thymus, embryo E14	
+1419	CAGE	pancreas, embryo E15	
+1420	CAGE	adrenal gland, embryo E17	
+1421	CAGE	gonad, embryo E13	
+1422	CAGE	Mouse Aortic Smooth Muscle cells - differentiated, biol_	
+1423	CAGE	mouse fibroblast cell line: CRL-1658 NIH/3T3	
+1424	CAGE	pancreas, neonate N25	
+1425	CAGE	intestine, neonate N07	
+1426	CAGE	skin, neonate N06	
+1427	CAGE	intestine, neonate N10	
+1428	CAGE	spleen, neonate N25	
+1429	CAGE	liver, neonate N06	
+1430	CAGE	intestine, neonate N06	
+1431	CAGE	liver, neonate N07	
+1432	CAGE	stomach, neonate N25	
+1433	CAGE	pancreas, neonate N00	
+1434	CAGE	liver, neonate N30	
+1435	CAGE	cortex, neonate N30	
+1436	CAGE	skin, neonate N10	
+1437	CAGE	lung, neonate N20	
+1438	CAGE	testis, neonate N20	
+1439	CAGE	lung, neonate N07	
+1440	CAGE	spleen, neonate N20	
+1441	CAGE	kidney, neonate N20	
+1442	CAGE	small intestine, neonate N16	
+1443	CAGE	liver, neonate N10	
+1444	CAGE	spleen, neonate N10	
+1445	CAGE	liver, neonate N00	
+1446	CAGE	heart, neonate N10	
+1447	CAGE	lung, neonate N25	
+1448	CAGE	intestine, neonate N25	
+1449	CAGE	kidney, neonate N25	
+1450	CAGE	liver, neonate N03	
+1451	CAGE	skin, neonate N00	
+1452	CAGE	thymus, neonate N25	
+1453	CAGE	intestine, neonate N00	
+1454	CAGE	heart, neonate N20	
+1455	CAGE	muscle (biceps femoris), neonate N30	
+1456	CAGE	testis, neonate N30	
+1457	CAGE	intestine, neonate N30	
+1458	CAGE	thymus, neonate N30	
+1459	CAGE	lung, neonate N30	
+1460	CAGE	stomach, neonate N30	
+1461	CAGE	cerebellum, neonate N30	
+1462	CAGE	pancreas, neonate N16	
+1463	CAGE	thymus, neonate N03	
+1464	CAGE	pancreas, neonate N01	
+1465	CAGE	pancreas, neonate N02	
+1466	CAGE	eyeball, neonate N01	
+1467	CAGE	thymus, neonate N02	
+1468	CAGE	pancreas, neonate N30	
+1469	CAGE	thymus, neonate N20	
+1470	CAGE	intestine, neonate N20	
+1471	CAGE	eyeball, neonate N16	
+1472	CAGE	testis, neonate N00	
+1473	CAGE	pituitary gland, neonate N00	
+1474	CAGE	adrenal gland, neonate N00	
+1475	CAGE	intestine, neonate N01	
+1476	CAGE	stomach, neonate N03	
+1477	CAGE	thymus, neonate N10	
+1478	CAGE	bone (os femoris), neonate N20	
+1479	CAGE	heart, neonate N25	
+1480	CAGE	thymus, neonate N06	
+1481	CAGE	liver, neonate N25	
+1482	CAGE	epididymis and seminiferous tubule, neonate N30	
+1483	CAGE	medulla oblongata, neonate N30	
+1484	CAGE	diencephalon, neonate N30	
+1485	CAGE	heart, neonate N30	
+1486	CAGE	kidney, neonate N30	
+1487	CAGE	testis, neonate N10	
+1488	CAGE	eyeball, neonate N02	
+1489	CAGE	kidney, neonate N10	
+1490	CAGE	eyeball, neonate N00	
+1491	CAGE	heart, neonate N16	
+1492	CAGE	stomach, neonate N07	
+1493	CAGE	thymus, neonate N07	
+1494	CAGE	lung, neonate N06	
+1495	CAGE	heart, neonate N00	
+1496	CAGE	kidney, neonate N00	
+1497	CAGE	skin, neonate N03	
+1498	CAGE	ovary, neonate N00	
+1499	CAGE	epididymis and seminiferous tubule, neonate N00	
+1500	CAGE	lung, neonate N10	
+1501	CAGE	liver, neonate N20	
+1502	CAGE	heart, neonate N03	
+1503	CAGE	testis, neonate N07	
+1504	CAGE	adrenal gland, neonate N25	
+1505	CAGE	lung, neonate N00	
+1506	CAGE	bone (os femoris), neonate N16	
+1507	CAGE	corpus striatum, neonate N00	
+1508	CAGE	bone (os femoris), neonate N02	
+1509	CAGE	hippocampus, neonate N00	
+1510	CAGE	Mouse Aortic Smooth Muscle cells,	
+1511	CAGE	Astrocytes,	
+1512	CAGE	granulocyte macrophage progenitor GMP, biol_	
+1513	CAGE	Inner ear stem cells, 1st generation stem cells, pool1	
+1514	CAGE	Mouse Neurons - cortical,	
+1515	CAGE	Mouse Astrocytes - cerebellar,	
+1516	CAGE	Mouse Astrocytes - hippocampus,	
+1517	CAGE	Mouse Astrocytes,	
+1518	CAGE	Mouse Granule cells,	
+1519	CAGE	Mouse Meningeal cells,	
+1520	CAGE	Mouse Neurons - hippocampal,	
+1521	CAGE	Mouse Neurons - striatal,	
+1522	CAGE	Mouse Neurons - ventral spinal cord,	
+1523	CAGE	Mouse Schwann,	
+1524	CAGE	Mouse Embryonic fibroblasts,	
+1525	CAGE	Inner ear stem cells, differentiation, day03, pool1	
+1526	CAGE	Inner ear stem cells, differentiation, day10, pool1	
+1527	CAGE	MC1+Gr1+ myeloid-derived suppressor cells cancer,  (0127 3LL)	
+1528	CAGE	common myeloid progenitor CMP, biol_	
+1529	CAGE	Mouse Cardiac Myocytes,	
+1530	CAGE	natural helper cells, IL2 treated, day15, biol_, tech_rep1	
+1531	CAGE	natural helper cells, naive, biol_, tech_rep1	
+1532	CAGE	Sox2+ Supporting cells - organ of corti, pool1	
+1533	CAGE	Atoh1+ Inner ear hair cells - organ of corti, pool1	
+1534	CAGE	stem cell (cKit+ Sca1- lineage-) KSL, biol_	
+1535	CAGE	MC1+Gr1+ myeloid-derived suppressor cells cancer,  (10,11,12 3LL)	
+1536	CAGE	MC1+Gr1+ myeloid-derived suppressor cells control,  (4,5,6PBS)	
+1537	CAGE	MC1+Gr1+ myeloid-derived suppressor cells control,  (0127 PBS)	
+1538	CAGE	MC1+Gr1+ myeloid-derived suppressor cells cancer,  (0128 3LL)	
+1539	CAGE	MC1+Gr1+ myeloid-derived suppressor cells control,  (0128 PBS)	
+1540	CAGE	Inner ear stem cells, 4th generation stem cells, pool1	
+1541	CAGE	Lgr5 positive intestinal stem cells, pool1	
+1542	CAGE	Lgr5 positive intestinal stem cells, pool2	
+1543	CAGE	Lgr5 positive intestinal stem cells, pool3	
+1544	CAGE	natural helper cells, IL2 treated, day15, biol_, tech_	
+1545	CAGE	natural helper cells, IL33 treated, day02, biol_, tech_rep1	
+1546	CAGE	natural helper cells, IL33 treated, 01hr, biol_, tech_	
+1547	CAGE	Mouse Neurons - substantia nigra, , tech_	
+1548	CAGE	Mouse Neurons - substantia nigra,	
+1549	CAGE	Mouse hepatocyte,	
+1550	CAGE	Mouse Mesenchymal stem cells - bone marrow derived,	
+1551	CAGE	Mouse Microglia,	
+1552	CAGE	Mouse Neurons - dorsal spinal cord,	
+1553	CAGE	Mouse Neurons - raphe,	
+1554	CAGE	cerebellum, embryo E17, biol_ (E17R1)	
+1555	CAGE	cerebellum, neonate N06, biol_ (P6R1)	
+1556	CAGE	cerebellum, neonate N09, biol_ (P9R1)	
+1557	CAGE	Neurons - substantia nigra, , tech_	
+1558	CAGE	cerebellum, embryo E11, biol_ (E11R1)	
+1559	CAGE	cerebellum, embryo E12, biol_ (E12R1)	
+1560	CAGE	cerebellum, embryo E13, biol_ (E13R1)	
+1561	CAGE	cerebellum, embryo E14, biol_ (E14R1)	
+1562	CAGE	cerebellum, embryo E15, biol_ (E15R1)	
+1563	CAGE	cerebellum, embryo E18, biol_ (E18R1)	
+1564	CAGE	cerebellum, neonate N00, biol_ (P0R1)	
+1565	CAGE	cerebellum, embryo E16, biol_ (E16R1)	
+1566	CAGE	cerebellum, neonate N03, biol_ (P3R1)	
+1567	CAGE	cerebellum, embryo E11, biol_ (E11R2)	
+1568	CAGE	cerebellum, embryo E12, biol_ (E12R2)	
+1569	CAGE	cerebellum, embryo E13, biol_ (E13R2)	
+1570	CAGE	cerebellum, embryo E14, biol_ (E14R2)	
+1571	CAGE	cerebellum, embryo E15, biol_ (E15R2)	
+1572	CAGE	cerebellum, embryo E16, biol_ (E16R2)	
+1573	CAGE	cerebellum, embryo E17, biol_ (E17R2)	
+1574	CAGE	cerebellum, embryo E18, biol_ (E18R2)	
+1575	CAGE	cerebellum, neonate N00, biol_ (P0R2)	
+1576	CAGE	cerebellum, neonate N03, biol_ (P3R2)	
+1577	CAGE	cerebellum, neonate N06, biol_ (P6R2)	
+1578	CAGE	cerebellum, neonate N09, biol_ (P9R2)	
+1579	CAGE	cerebellum, embryo E11, biol_ (E11R3)	
+1580	CAGE	cerebellum, embryo E12, biol_ (E12R3)	
+1581	CAGE	cerebellum, embryo E13, biol_ (E13R3)	
+1582	CAGE	cerebellum, embryo E14, biol_ (E14R3)	
+1583	CAGE	cerebellum, embryo E15, biol_ (E15R3)	
+1584	CAGE	cerebellum, embryo E16, biol_ (E16R3)	
+1585	CAGE	cerebellum, embryo E17, biol_ (E17R3)	
+1586	CAGE	cerebellum, embryo E18, biol_ (E18R3)	
+1587	CAGE	cerebellum, neonate N00, biol_ (P0R3)	
+1588	CAGE	cerebellum, neonate N03, biol_ (P3R3)	
+1589	CAGE	cerebellum, neonate N06, biol_ (P6R3)	
+1590	CAGE	cerebellum, neonate N09, biol_ (P9R3)	
+1591	CAGE	visual cortex - wildtype, neonate N15,	
+1592	CAGE	visual cortex - wildtype, neonate N30,	
+1593	CAGE	visual cortex - wildtype, neonate N60-70,	
+1594	CAGE	visual cortex - Mecp knockout, neonate N15,	
+1595	CAGE	visual cortex - Mecp knockout, neonate N30,	
+1596	CAGE	visual cortex - Mecp knockout, neonate N60-70,	
+1597	CAGE	CD41+ megakaryocyte cancer,	
+1598	CAGE	neurospheres - sympathetic neuron derived, biol_	
+1599	CAGE	neurospheres - parasympathetic neuron derived, biol_	
+1600	CAGE	neurospheres - enteric neuron derived, biol_	
+1601	CAGE	Mouse hepatic Stellate Cells (lipocyte),	
+1602	CAGE	CD326+ enterocyte, pool2	
+1603	CAGE	Ileum epithelium, pool1	
+1604	CAGE	Follicle Associated Epithelium, pool3	
+1605	CAGE	CD41+ megakaryocyte control,	
+1606	CAGE	Mouse hepatic Sinusoidal Endothelial Cells,	
+1607	CAGE	CD326++ enterocyte isolated from mice, treated with RANKL, day03, pool2	
+1608	CAGE	Follicle Associated Epithelium, pool2	
+1609	CAGE	CD4+CD25-CD44- naive conventional T cells, pool1 (C57BL_6J)	
+1610	CAGE	CD4+CD25-CD44- naive conventional T cells, antiCD3_CD28 stimulation, 06hr, pool1 (C57BL_6J)	
+1611	CAGE	CD4+CD25-CD44- naive conventional T cells, PMA and ionomycin stimulation, 02hr, pool1 (C57BL_6J)	
+1612	CAGE	CD4+CD25-CD44- naive conventional T cells, pool2 (Balb_cAJcl)	
+1613	CAGE	CD4+CD25+ regulatory T cells, pool2 (Balb_cAJcl)	
+1614	CAGE	CD4+CD25-CD44- naive conventional T cells, antiCD3_CD28 stimulation, 06hr, pool2 (Balb_cAJcl)	
+1615	CAGE	CD4+CD25-CD44- naive conventional T cells, PMA and ionomycin stimulation, 02hr, pool2 (Balb_cAJcl)	
+1616	CAGE	GP2+ M cell, pool1	
+1617	CAGE	GP2+ M cell, pool2	
+1618	CAGE	Ileum epithelium, pool2	
+1619	CAGE	CD326+ enterocyte isolated from mice, treated with RANKL, day03, pool2	
+1620	CAGE	CD326++ enterocyte isolated from mice, treated with RANKL, day03, pool1	
+1621	CAGE	GP2+ M cell, pool3	
+1622	CAGE	CD326+ enterocyte isolated from mice, treated with RANKL, day03, pool1	
+1623	CAGE	Mouse CD4+ T Cells,	
+1624	CAGE	Mouse CD8+ T Cells,	
+1625	CAGE	Mouse CD19+ B Cells,	
+1626	CAGE	CD326+ enterocyte, pool1	
+1627	CAGE	CD4+CD25+ regulatory T cells, pool1 (C57BL_6J)	
+1628	CAGE	macrophage, bone marrow derived	
+1629	CAGE	osteoclast, bone marrow derived	
+1630	CAGE	CD4+CD25+ regulatory T cells, PMA and ionomycin stimulation, 02hr, pool1 (C57BL 6J)	
+1631	CAGE	Neurons - spiral ganglion, pool1	
+1632	CAGE	CD4+CD25+ regulatory T cells, antiCD3 CD28 stimulation, 06hr, pool1 (BalbcA)	
+1633	CAGE	CD4+CD25+ regulatory T cells, antiCD3 CD28 stimulation, 06hr, pool1 (C57BL 6J)	
+1634	CAGE	CD4+CD25+ regulatory T cells, PMA and ionomycin stimulation, 02hr, pool1 (BalbcA)	
+1635	CAGE	natural helper cells, IL2 treated, day15, biol_, tech_rep2	
+1636	CAGE	natural helper cells, IL33 treated, day02, biol_, tech_rep2	
+1637	CAGE	natural helper cells, IL33 treated, 01hr, biol_, tech_rep2	
+1638	CAGE	natural helper cells, naive, biol_, tech_rep2	
+1639	CAGE	natural helper cells, IL33 treated, day02, biol_, tech_	
+1640	CAGE	natural helper cells, naive, biol_, tech_	
+1641	CAGE	natural helper cells, IL2 treated, day15, biol_, tech_rep3	
+1642	CAGE	natural helper cells, naive, biol_, tech_rep3	

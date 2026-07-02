@@ -1,39 +1,35 @@
 '''Enformer Predictor using Flask'''
-import os
 import sys
 import json
+import argparse
 from flask import Flask
-# Get the absolute path of the script's directory
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
+from config import PREDICTOR_NAME, HELP_FILE, SUPPORTED_REQUEST_FORMATS, SUPPORTED_RESPONSE_FORMATS, SCRIPT_DIR
 from error_checking_functions import *
 from schema_validation import *
 from predictor_content_handler import decode_request, encode_response
-
-# NOTE: Hardcode name of this Predictor. It will be added to ALL responses.
-PREDICTOR_NAME = "enformer_human"
-
-sys.path.append(f"{SCRIPT_DIR}/script_and_utils/")   
-
-# Determine if running inside a container or not
-if os.path.exists('/.singularity.d'):
-    # Running inside the container
-    print("Running inside the container...")
-    HELP_FILE = f"{SCRIPT_DIR}/script_and_utils/simplify_targets/enformer_help_message.json"
-else:
-    # Running outside the container
-    print("Running outside the container...")
-    PREDICTOR_CONTAINER_DIR = SCRIPT_DIR 
-    HELP_FILE = os.path.join(SCRIPT_DIR, 'script_and_utils', 'simplify_targets', 'enformer_help_message.json') 
     
-sys.path.append(f"{SCRIPT_DIR}/script_and_utils/")   
+sys.path.append(f"{SCRIPT_DIR}/script_and_utils/") 
+from model_validation import *  
 from enformer_predict_codebase import *
-from model_validation import *
 
-# ------ Configuration for Wire-Format ------
-SUPPORTED_REQUEST_FORMATS = [fmt.lower() for fmt in ["application/json"]] # Remove msgpack if not supported
-SUPPORTED_RESPONSE_FORMATS = [fmt.lower() for fmt in ["application/json", "application/msgpack"]] # JSON is always supported even when not mentioned
+parser = argparse.ArgumentParser(description=f'{PREDICTOR_NAME} Predictor API')
+parser.add_argument('ip', type=str, help='IP address to bind')
+parser.add_argument('port', type=int, help='Port to bind')
+parser.add_argument('matcher_ip', type=str, nargs='?', default=None, help='Matcher Service IP (Optional)')
+parser.add_argument('matcher_port', type=int, nargs='?', default=None, help='Matcher Service Port (Optional)')
+args = parser.parse_args()
 
+predictor_ip = args.ip
+predictor_port = args.port
+matcher_ip = args.matcher_ip
+matcher_port = args.matcher_port
+
+if matcher_ip and matcher_port:
+    print(f"Matcher service configured at: {matcher_ip}:{matcher_port}")
+else:
+    print("Matcher service is NOT configured. Running in 'exact-match-only' mode.")
+    
 # --- Flask App and Central Error Handler ---
 app = Flask(__name__)
 # One of these works to maintain order when using jsonify()
@@ -42,7 +38,7 @@ app.config["JSON_SORT_KEYS"] = False
 
 def create_error_response(error_key, messages, status_code):
     """ 
-    Formats error response into a standarized JSON structure.
+    Formats error response into a standardized JSON structure.
     
     Args:
         error_key (str): The category of the error (e.g. 'bad_prediction_request', 'prediction_request_failed').
@@ -129,19 +125,24 @@ def predict():
         # Preprocess the data using the imported function
         sequences = preprocess_data(evaluator_request)
 
+        #Extract prediction_ranges if they exists
+        prediction_ranges = evaluator_request.get('prediction_ranges', {})
         # ---------------------- Extract Prediction Tasks and Run the Model ----------------------
         # Start big loop here for all the prediction_tasks
         # First step is to collect all unique tasks
-        request_tasks = set()  # Store unique (request_type, cell_type) pairs
+        request_tasks = set()  # Store unique (request_type, cell_type, species) combinations
         for prediction_task in evaluator_request['prediction_tasks']:
             request_type = prediction_task['type']
             cell_type = prediction_task['cell_type']
-            request_tasks.add((request_type, cell_type))
+            species = prediction_task['species']
+            request_tasks.add((request_type, cell_type, species))
 
         print(f"Unique tasks extracted: {request_tasks}")
         # Then run Enformer Model ONCE for all required tracks
         print("Running Enformer model on collected tasks...")
-        task_predictions, matcher_version = predict_enformer(sequences, request_tasks, matcher_ip, matcher_port, is_point_readout)
+        task_predictions, matcher_version = predict_enformer(
+            sequences, request_tasks, matcher_ip, matcher_port, prediction_ranges, is_point_readout
+            )
         model_errors = {'prediction_request_failed': []}
         if isinstance(task_predictions, str):
             # Wrap the error string into error payload 
@@ -167,13 +168,14 @@ def predict():
             task_name = prediction_task['name']
             request_type = prediction_task['type']
             cell_type = prediction_task['cell_type']
+            species = prediction_task['species']
             
             # ADDITION: Determine Scale for predictions
             # Get requested scale
             requested_scale = prediction_task.get('scale') 
 
-            # Retrieve the predictions for this task
-            task_key = (request_type, cell_type)
+            # # Retrieve the predictions for this task using the new triplet key
+            task_key = (request_type, cell_type, species)
             task_result = task_predictions[task_key]
            
             predictions = {
@@ -225,14 +227,14 @@ def predict():
                     'species_requested': prediction_task['species'],
                     'species_actual': prediction_task['species'],
                     'scale_prediction_requested': requested_scale,
-                    'scale_prediction_actual': effective_scale,
-                    'predictions': predictions_scaled
+                    'scale_prediction_actual': effective_scale
                 }
-                
+            
                 # Only add aggregation if not empty
                 if aggregation:
                     current_prediction_task['aggregation'] = aggregation
-                
+
+                current_prediction_task['predictions'] = predictions_scaled
                 # Conditionally add the 'trim_upstream' key
                 if not is_point_readout: # This means 'track' readout
                     current_prediction_task['trim_upstream'] = task_result['trim_upstream'] 
@@ -257,15 +259,7 @@ def predict():
 
 # --- Run Flask ---
 if __name__ == '__main__':
-    if len(sys.argv) != 5:
-        print(f"Invalid arguments! Arguments must have: <container image/python script> <ip_address> <port> <matcher_ip_address> <matcher_port>")
-        sys.exit(1)
-        
-    predictor_ip = sys.argv[1]
-    predictor_port = int(sys.argv[2])
-    matcher_ip = sys.argv[3]
-    matcher_port = sys.argv[4]
-    
+
     # from waitress import serve
     print(f"{PREDICTOR_NAME} Predictor is running on http://{predictor_ip}:{predictor_port}")
     # serve(app, host=predictor_ip, port=predictor_port)
