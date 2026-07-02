@@ -53,6 +53,7 @@ def check_seqs_specifications(sequences, json_return_error_model):
     for seq_id, seq in sequences.items():
         if not seq:
             json_return_error_model["prediction_request_failed"].append(f"sequence '{seq_id}' is empty")
+            continue
         
         invalid_chars = set(seq.upper()) - valid_bases
         if invalid_chars:
@@ -107,7 +108,7 @@ def check_prediction_task_mandatory_keys(prediction_tasks, json_return_error):
             
             error_msg = (f"Mandatory keys missing from prediction_task '{task_identifier}': "
                          f"{', '.join(missing)}")
-            print(error_msg)
+            # print(error_msg)
             json_return_error['bad_prediction_request'].append(error_msg)
             
     return json_return_error
@@ -225,15 +226,18 @@ def check_prediction_ranges(prediction_ranges, sequences, json_return_error):
         
         if not isinstance(value, list):
             json_return_error['bad_prediction_request'].append(f"Values for '{key}' in 'prediction_ranges' must be in a list")
-            
+            continue
+        
         if not value:
             continue
         
         if len(value) != 2:
             json_return_error['bad_prediction_request'].append(f"Range array for '{key}' in 'prediction_ranges' must have 2 elements")
+            continue
         
         if not all(isinstance(num, int) for num in value):
             json_return_error['bad_prediction_request'].append(f"Values in '{key}' in 'prediction_ranges' must be integers")
+            continue
         
         start = value[0]
         end = value[1]

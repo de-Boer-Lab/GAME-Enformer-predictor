@@ -3,7 +3,29 @@ From: python:3.13-slim
 Stage: build
 
 %files
-    ../GAME-Enformer-predictor/ /enformer_GAME
+    ./config.py                       /enformer_GAME/config.py
+    ./enformer_predictor_rest_api.py  /enformer_GAME/enformer_predictor_rest_api.py
+    ./error_checking_functions.py     /enformer_GAME/error_checking_functions.py
+    ./predictor_content_handler.py    /enformer_GAME/predictor_content_handler.py
+    ./schema_validation.py            /enformer_GAME/schema_validation.py
+
+    ./Modules/Enformer.py             /enformer_GAME/Modules/Enformer.py
+    ./Modules/FastaExt.py             /enformer_GAME/Modules/FastaExt.py
+
+    ./script_and_utils/api_preprocessing_utils.py    /enformer_GAME/script_and_utils/api_preprocessing_utils.py
+    ./script_and_utils/enformer_predict_codebase.py  /enformer_GAME/script_and_utils/enformer_predict_codebase.py
+    ./script_and_utils/enformer_utils.py             /enformer_GAME/script_and_utils/enformer_utils.py
+    ./script_and_utils/model_validation.py           /enformer_GAME/script_and_utils/model_validation.py
+
+    # --- Runtime data: help file + BOTH simplified targets files ---
+    ./script_and_utils/simplify_targets/enformer_help_message.json              /enformer_GAME/script_and_utils/simplify_targets/enformer_help_message.json
+    ./script_and_utils/simplify_targets/enformer_human_targets_simplified.txt   /enformer_GAME/script_and_utils/simplify_targets/enformer_human_targets_simplified.txt
+    ./script_and_utils/simplify_targets/enformer_mouse_targets_simplified.txt   /enformer_GAME/script_and_utils/simplify_targets/enformer_mouse_targets_simplified.txt
+
+    # --- Trained model: TFHub SavedModel (saved_model.pb + variables/) ---
+    ./script_and_utils/trained_model  /enformer_GAME/script_and_utils/trained_model
+
+    ./enformer_GPU.yml                /enformer_GAME/enformer_GPU.yml
 
 %environment
     # Prevent binding of host directories by default
@@ -52,7 +74,7 @@ Stage: build
     conda activate enformer17
 
     echo "Installing Flask..."
-    pip install flask
+    pip install flask requests
     # pip install waitress
 
     echo "Setting permissions..."
@@ -72,7 +94,7 @@ Stage: build
 
 %labels
     Authors "Ishika Luthra, Satyam Priyadarshi"
-    Version "1.0"
+    game_schema_version "1.0"
     Description "This container is the Predictor set up for Genomic API for Model Evaluation using the Enformer model."
 
 %help
@@ -92,7 +114,7 @@ Stage: build
     ```
 
     Details
-    - The container receives data via HTTP and does not require mounted data directories.
+    - The container receives data via a TCP socket and does not require mounted data directories.
     - Replace `HOST_IP` and `PORT_IP` with the server IP and port configuration for the Evaluator to connect to.
     - Replace `MATCHER_IP` and `MATCHER_PORT` with the IP and port configuration of the Matcher for the Predictor to connect to. If Matcher is not needed for the task, put in placeholder IP and PORT.
     - The `--nv` flag sets up the environment of the container to use an NVIDIA GPU and CUDA libraries to run a CUDA-enabled application.
