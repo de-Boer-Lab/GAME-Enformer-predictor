@@ -4,6 +4,13 @@ A RESTful Enformer Predictor for the **Genomic API for Model Evaluation (GAME)**
 
 The underlying model is Enformer (Avsec et al., 2021, *Nature Methods*), loaded from a TF-Hub SavedModel. It is an attention-based model that reads a long DNA context and predicts thousands of genomic tracks at 128 bp resolution across a central window, jointly for **human and mouse** output heads.
 
+## Important Links
+
+- To learn more about the GAME Framework ([Main GAME Repository](https://github.com/de-Boer-Lab/Genomic-API-for-Model-Evaluation), [preprint](https://www.biorxiv.org/content/10.1101/2025.07.04.663250v1.full))
+- GAME Documentation: [ReadTheDocs](https://genomic-api-for-model-evaluation-documentation.readthedocs.io)
+- Pre-built Enformer container image: [Hugging Face](https://huggingface.co/datasets/deBoerLab/Enformer_Predictor_GAME)
+- List of all [GAME Modules](https://github.com/de-Boer-Lab/GAME_modules)
+
 ---
 
 ## Repository layout
