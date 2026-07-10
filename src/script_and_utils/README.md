@@ -37,7 +37,7 @@ Request type determines which assay rows are eligible, matched case-insensitivel
 |--------------|-----------------|---------------|
 | `accessibility` | ATAC **and** DNASE for the cell type, concatenated | e.g. `["ATAC", "DNASE"]` |
 | `expression`, `expression_pol2`, `expression_mrna` | CAGE | `["CAGE"]` |
-| `binding_{molecule}` | CHIP filtered to `{molecule}` | `["CHIP_{molecule}"]` |
+| `binding_{molecule}` | ChIP filtered to `{molecule}` | `["CHIP_{molecule}"]` |
 
 `accessibility` deliberately pools ATAC + DNASE into one estimate (the multi-assay case below). The `binding_` prefix is parsed to extract the molecule (`binding_CTCF` → `CTCF`).
 
@@ -92,7 +92,7 @@ Both clamp to the sequence ends, and the range coordinates are rebased to the su
 
 ### Slicing back to the range
 
-- **CASE 1 (subsetted seq ≤ prediction_window)** — one prediction, centered. `slice_prediction_tracks_for_range` converts the rebased range into bin indices, accounting for the right-biased padding (`left_padding = total_padding // 2`) and the left buffer (`SEQ_CONTEXT`). It returns the bin slice plus `trim_upstream` = the number of bases in the first bin that fall *before* the range start (0–127).
+- **CASE 1 (subsetted seq ≤ prediction_window)** — one prediction, centered. `slice_prediction_tracks_for_range` converts the rebased range into bin indices, accounting for the padding (`left_padding = total_padding // 2`) and the left buffer (`SEQ_CONTEXT`). It returns the bin slice plus `trim_upstream` = the number of bases in the first bin that fall *before* the range start (0–127).
 - **CASE 2 (subsetted seq > prediction_window)** — tiled prediction (below); the concatenated track is sliced by `start_bin = floor(range_start/128)`, `end_bin = ceil(range_end/128)`, and `trim_upstream = range_start − start_bin*128`.
 
 `trim_upstream` is returned to the Evaluator (track readout only) so it can drop the leading bases of the first bin that lie outside the requested range.
@@ -101,11 +101,11 @@ Both clamp to the sequence ends, and the range coordinates are rebased to the su
 
 ## Long-sequence handling (tiling)
 
-Enformer predicts 114,688 bp from a 196,608 bp input, with 40,960 bp of receptive-field buffer per side. Sequences are routed by length.
+Enformer predicts 114,688 bp from a 196,608 bp input, with 40,960 bp of receptive-field buffer per side. Sequences are parsed by length.
 
 ### CASE 1 — sequence ≤ prediction_window (114,688 bp)
 
-Pad to `SEQ_LEN` (393,216, centered, right-biased), one-hot encode, predict once, then `slice_prediction_tracks` keeps only the bins overlapping real sequence (dropping full-N bins), returning `trim_upstream` for the partial leading bin.
+Pad to `SEQ_LEN` (393,216, centered with any leftover base added to the right), one-hot encode, predict once, then `slice_prediction_tracks` keeps only the bins overlapping real sequence (dropping full-N bins), returning `trim_upstream` for the partial leading bin.
 
 ### CASE 2 — sequence > prediction_window
 
@@ -113,7 +113,7 @@ Pad to `SEQ_LEN` (393,216, centered, right-biased), one-hot encode, predict once
 2. Slide a 196,608 bp window in **114,688 bp steps**, tracking `seq_predicted_end`.
 3. **Full 196,608 chunk** → predict, keep all 896 bins (114,688 bp).
 4. **Trailing partial chunk** → pad downstream with N to 196,608, predict, then crop the full-N bins from the end: `bins_to_crop = (downstream_pad − 40,960) // 128` (floored, never negative, so no real-sequence bin is dropped). The final sub-114,688 chunk does this once and breaks.
-5. Concatenate all kept chunks per species into one long track; if a range was requested, slice it as in CASE 2 above.
+5. Concatenate all kept chunks per species into one long track; if a range was requested, slice it as in CASE 2 ("Slicing back to the range") above
 
 Downstream (not centered) padding on trailing chunks keeps the first base aligned to the window start.
 

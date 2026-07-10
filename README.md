@@ -54,16 +54,16 @@ Enformer/
 
 Enformer emits two output heads. The Predictor filters them down to the tracks needed for each request.
 
-| Head | Total tracks | DNASE | ATAC | CAGE | CHIP |
+| Head | Total tracks | DNASE | ATAC | CAGE | ChIP |
 |------|:------------:|:-----:|:----:|:----:|:----:|
 | Human (`homo_sapiens`) | 5313 | 674 | 10 | 638 | 3991 |
 | Mouse (`mus_musculus`) | 1643 | 101 | 127 | 357 | 1058 |
 
 Request types map onto these assays (see [`src/script_and_utils/`](src/script_and_utils/README.md) for the full logic):
 
-- `accessibility` → ATAC **and** DNASE tracks for the cell type (concatenated if available)
+- `accessibility` → ATAC **and** DNASE tracks for the cell type (averaged if both are available)
 - `expression`, `expression_pol2`, `expression_mrna` → CAGE
-- `binding_{molecule}` → CHIP filtered to that molecule (e.g. `binding_CTCF`)
+- `binding_{molecule}` → ChIP filtered to that molecule (e.g. `binding_CTCF`)
 
 - **Supported species:** `homo_sapiens`, `mus_musculus`
 - **Effective input:** 196,608 bp · **Prediction window:** 114,688 bp (896 bins) · **Resolution:** 128 bp (`bin_size: 128`)
