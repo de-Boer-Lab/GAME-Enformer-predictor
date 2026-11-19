@@ -72,16 +72,27 @@ def preprocess_data(payload):
 
     #once the adapters are added check the sequences do not contain any other bases [A,T,G,C,N]
     errors = check_seqs_specifications(sequences, errors)
-    #Check prediction ranges
+    #Check prediction ranges. An out-of-bounds range is a problem with the request itself, found before the
+    #model is called, so it is a bad request (400) and not a prediction failure (422).
+    range_errors = []
     if 'prediction_ranges' in payload:
         for seq_id, pr in payload['prediction_ranges'].items():
             if pr: # Only process non-empty ranges
                 start, end = pr
 
-                if start >= len(sequences[seq_id]) or end >= len(sequences[seq_id]):
-                    err_msg = f"Invalid range for '{seq_id}': index is out of bounds. The maximum valid index for a sequence of length {len(sequences[seq_id])} is {len(sequences[seq_id]) - 1}."
-                    errors['prediction_request_failed'].append(err_msg)
-    
+                # Ranges are half-open [start, end): end is exclusive, so it may equal the sequence length.
+                seq_len = len(sequences[seq_id])
+                if start >= seq_len or end > seq_len:
+                    err_msg = (
+                        f"Invalid range for '{seq_id}': out of bounds for a sequence of length {seq_len}. "
+                        f"Ranges are half-open [start, end): start must be < {seq_len} "
+                        f"and end must be <= {seq_len} (end is exclusive)."
+                    )
+                    range_errors.append(err_msg)
+
+    if range_errors:
+        raise BadRequestError(range_errors)
+
     if any(errors.values()):
         flagged_errors = [msg for sublist in errors.values() for msg in sublist]
         raise PredictionFailedError(flagged_errors)
