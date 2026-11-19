@@ -2,10 +2,7 @@
   "model": "Enformer",
   "game_schema_version": "1.0",
   "publication": "Avsec et. al, 2021 (Nature Methods)",
-  "container_authors": [
-    "Ishika Luthra",
-    "Satyam Priyadarshi"
-  ],
+  "container_authors": "Ishika Luthra, Satyam Priyadarshi",
   "input_size": 196608,
   "bin_size": 128,
   "expression_strand_specific": false,
