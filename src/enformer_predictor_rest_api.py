@@ -132,6 +132,8 @@ def predict():
         # First step is to collect all unique tasks
         request_tasks = set()  # Store unique (request_type, cell_type, species) combinations
         for prediction_task in evaluator_request['prediction_tasks']:
+            if unsupported_task_reason(prediction_task):
+                continue  # Not sent to the model; returned as a failed task below
             request_type = prediction_task['type']
             cell_type = prediction_task['cell_type']
             species = prediction_task['species']
@@ -157,11 +159,15 @@ def predict():
         # Now format predictions to API JSON structure
         # Create JSON to return
         json_return = {
-            'matcher_version': matcher_version,
             'bin_size': 128,
             # Prediction task is an array of objects for all requested tasks
             'prediction_tasks': []
         }
+        # matcher_version is only returned if a Matcher was used. If the Matcher was used but
+        # did not return a version ("UnknownMatcher" placeholder in enformer_utils.py), it is null.
+        if matcher_version is not None:
+            json_return = {'matcher_version': None if matcher_version == "UnknownMatcher" else matcher_version,
+                           **json_return}
 
         # Loop through all the prediction tasks
         for prediction_task in evaluator_request['prediction_tasks']:
@@ -176,7 +182,13 @@ def predict():
 
             # # Retrieve the predictions for this task using the new triplet key
             task_key = (request_type, cell_type, species)
-            task_result = task_predictions[task_key]
+            # Tasks Enformer cannot perform (unsupported species/type) were not predicted,
+            # so they get an error object instead.
+            unsupported_reason = unsupported_task_reason(prediction_task)
+            if unsupported_reason:
+                task_result = {"error": [{"prediction_request_failed": unsupported_reason}]}
+            else:
+                task_result = task_predictions[task_key]
            
             predictions = {
                 seq_id: result
@@ -189,13 +201,13 @@ def predict():
                 current_prediction_task = {
                     'name': task_name,
                     'type_requested': request_type,
-                    'type_actual': "N/A",  # If remapped, update this
+                    'type_actual': None,
                     'cell_type_requested': cell_type,
-                    'cell_type_actual': "N/A",  # If remapped, update this
+                    'cell_type_actual': None,
                     'species_requested': prediction_task['species'],
-                    'species_actual': prediction_task['species'],
+                    'species_actual': None,
                     'scale_prediction_requested': prediction_task.get('scale', None),  # Default to linear
-                    'scale_prediction_actual': "N/A",
+                    'scale_prediction_actual': None,
                     'predictions': predictions
                     
                 }

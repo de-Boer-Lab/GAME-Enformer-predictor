@@ -91,7 +91,7 @@ apptainer run --nv --containall predictor_enformer.sif <HOST> <PORT> <MATCHER_IP
 | `MATCHER_IP` | IP of the Matcher service (optional) |
 | `MATCHER_PORT` | Port of the Matcher service (optional) |
 
-The Matcher arguments are **optional**: with both supplied the Predictor runs normally; without them it prints "running in exact-match-only mode" and any request needing a fuzzy match fails gracefully rather than crashing. The `--nv` flag exposes the NVIDIA GPU; `--containall` gives a clean, reproducible environment with no local installs causing dependency issues. 
+The Matcher arguments are **optional**: with both supplied the Predictor runs normally; without them it prints "running in exact-match-only mode" and any task needing a fuzzy match fails gracefully (as a failed task, see [Tasks that cannot be performed](#tasks-that-cannot-be-performed)) rather than crashing. The `--nv` flag exposes the NVIDIA GPU; `--containall` gives a clean, reproducible environment with no local installs causing dependency issues. 
 
 ---
 
@@ -127,11 +127,33 @@ apply_scaling (per task)           # linear / log output         (src/script_and
 
 | Class | Status | `error_key` | Use |
 |-------|:------:|-------------|-----|
-| `BadRequestError` | 400 | `bad_prediction_request` | Malformed/schema-invalid request (missing keys, bad types, bad ranges, unsupported Content-Type) |
-| `PredictionFailedError` | 422 | `prediction_request_failed` | Valid request the model can't fulfill (unsupported readout/species/type, invalid bases, no track match) |
+| `BadRequestError` | 400 | `bad_prediction_request` | Malformed/schema-invalid request (missing keys, bad types, an unrecognised `readout` or `scale` value, invalid `prediction_ranges` including `start >= end`, out of bounds (`start` must be < sequence length and `end` must be <= sequence length, counting any `upstream_seq` / `downstream_seq` flanks) or keys that do not match `sequences`, unsupported Content-Type) |
+| `PredictionFailedError` | 422 | `prediction_request_failed` | Valid request the model can't fulfill (`interaction_matrix` readout, invalid bases) |
 | `ServerError` | 500 | `server_error` | Unexpected backend failure (incl. serialization errors) |
+| (per task, inside `predictions`) | 200 | `prediction_request_failed`, `upstream_dependency_failed` | A task that could not be performed: unsupported species/type or no matching tracks (`prediction_request_failed`), or the Matcher was needed but failed or was unreachable (`upstream_dependency_failed`). The other tasks in the request are still returned |
 
-The generic schema checks (mandatory keys, value/type checks, prediction-range format, flank strings) live in `src/schema_validation.py` + `src/error_checking_functions.py`. Enformer-specific narrowing (rejecting `interaction_matrix`, non-human/mouse species, `conformation_*` / `expression_splicing` types, unsupported scales) happens in `src/script_and_utils/model_validation.py`.
+The generic schema checks (mandatory keys, value/type checks, prediction-range format, flank strings) live in `src/schema_validation.py` + `src/error_checking_functions.py`. `prediction_ranges` are 0-indexed and half-open (`[start, end)`, like Python slicing), and `start` must be strictly less than `end`. Enformer-specific narrowing happens in `src/script_and_utils/model_validation.py`: the request-level rule (rejecting `interaction_matrix`) fails the whole request (an unrecognised `scale` is already rejected as 400 by the schema checks), while the task-level rules (non-human/mouse species, `conformation_*` / `expression_splicing` types) fail only that task.
+
+### Tasks that cannot be performed
+
+If a request has several `prediction_tasks`, Enformer predicts every task it can and still returns the ones it cannot (for example, the requested `species` is not `homo_sapiens` or `mus_musculus`, or no tracks match the requested cell type). The HTTP status stays 200. A task that could not be performed has `name` and all `*_requested` keys as normal, every `*_actual` key set to `null`, an error object as `predictions`, and no `aggregation` or `trim_upstream`:
+
+```json
+{
+    "name": "unmatched_cell_type",
+    "type_requested": "expression",
+    "type_actual": null,
+    "cell_type_requested": "made_up_cell_type_xyz",
+    "cell_type_actual": null,
+    "species_requested": "homo_sapiens",
+    "species_actual": null,
+    "scale_prediction_requested": "linear",
+    "scale_prediction_actual": null,
+    "predictions": {
+        "error": [{"prediction_request_failed": "Request Error: No requested tracks in the requested type: expression and cell type: made_up_cell_type_xyz found."}]
+    }
+}
+```
 
 ---
 
@@ -139,7 +161,7 @@ The generic schema checks (mandatory keys, value/type checks, prediction-range f
 
 When a `/predict` task names a `cell_type` (and, for binding, a molecule), the Predictor first tries an **exact** match in the relevant assay rows of the species' target table. On a miss it queries Matcher; the exact selection and fallback logic — including the **two-stage** fallback for `binding_` (match molecule first, then cell type) — lives in `filter_evaluator_request()`, documented in [`src/script_and_utils/`](src/script_and_utils/README.md).
 
-The response surfaces `cell_type_requested` vs `cell_type_actual`, `type_actual` (the assays actually used), and the `matcher_version` (`"N/A"` when an exact match was found, so Matcher was never called). Matcher connectivity failures are caught and returned as a structured error rather than crashing the request.
+The response surfaces `cell_type_requested` vs `cell_type_actual`, `type_actual` (the assays actually used), and the `matcher_version`. `matcher_version` is only returned when the Matcher was used (it is omitted when every task had an exact match), and is `null` if the Matcher was used, or needed but unreachable, and did not return a version. If the Matcher is needed but fails or is unreachable, only the tasks that needed it fail, with the distinct error key `upstream_dependency_failed` (a real "no match" uses `prediction_request_failed`); the other tasks are still returned.
 
 ### Build the container
 
