@@ -7,7 +7,7 @@ This folder holds everything the model touches: track selection (with Matcher), 
 | `enformer_predict_codebase.py` | `predict_enformer()` — the engine: collect track indices, run the model once per sequence, slice/aggregate per task. Also carries an embedded test suite. |
 | `enformer_utils.py` | `filter_evaluator_request()` (Matcher-aware track selection) + the two track-slicing functions |
 | `api_preprocessing_utils.py` | `pad_sequence`, `subset_sequence_for_ranges` (and minor helper functions) |
-| `model_validation.py` | `model_specific_payload_validation()` + `apply_scaling()` |
+| `model_validation.py` | `unsupported_task_reason()` + `model_specific_payload_validation()` + `apply_scaling()` |
 
 Model constants (from `enformer_predict_codebase.py`):
 
@@ -47,17 +47,17 @@ Each branch tries an **exact** cell-type match first; on a miss it POSTs to `htt
 
 ```
 accessibility / expression
-   exact cell_type?  ── yes ─► use rows           (matcher_version = "N/A")
-                     ── no  ─► Matcher(cell_type) ─► use matched rows | request error
+   exact cell_type?  ── yes ─► use rows           (matcher_version = None: Matcher not used)
+                     ── no  ─► Matcher(cell_type) ─► use matched rows | task error
 
 binding_{molecule}                                  # TWO-stage
    exact (molecule AND cell_type)?  ── yes ─► use rows
                                     ── no  ─► Matcher(molecule)
                                                  ├─ retry exact cell_type with matched molecule
-                                                 └─ still miss ─► Matcher(cell_type) ─► use rows | error
+                                                 └─ still miss ─► Matcher(cell_type) ─► use rows | task error
 ```
 
-The function returns a 4-tuple `(tracks_df_or_error_str, cell_type_actual, type_actual, matcher_version)`. A connection failure returns an error string in slot 1 (and `"error"` as the version) so the caller records a per-task error and keeps going for the other tasks rather than crashing. `MATCHER_NULL_RESPONSE` (`"NULL"`) or a missing `*_actual` is treated as "no match" → request error for that task.
+The function returns a 4-tuple `(tracks_df_or_error_str, cell_type_actual, type_actual, matcher_version)`. `matcher_version` is `None` when the Matcher was not used. A connection failure returns an error string in slot 1 (and `"error"` as the version) so the caller records a per-task `upstream_dependency_failed` error and keeps going for the other tasks rather than crashing. A missing or null `*_actual` from the Matcher is treated as "no match" → `prediction_request_failed` for that task. Both are stored as `{"error": [{"<error_key>": "<message>"}]}`, which the server returns as that task's `predictions` (HTTP 200, all `*_actual` keys `null`).
 
 ### 4. Dual-species heads
 
@@ -67,7 +67,7 @@ A request's `species` selects which head to read: `mus_musculus` → `raw_preds[
 
 After a task's tracks are selected they are averaged across tracks (`np.mean(..., axis=-1)`). Then:
 
-- **`track` readout** → the full 896-bin (or range-sliced) vector is returned, plus a `trim_upstream` entry (see ranges below).
+- **`track` readout** → the full 896-bin (or range-sliced) vector is returned (always a list, even when it is a single bin), plus a `trim_upstream` entry (see ranges below).
 - **`point` readout** → the bins are further averaged to a single value per sequence.
 
 The response advertises what was aggregated via an `aggregation` dict, set in the server:
@@ -83,7 +83,7 @@ If ranges are sent by the Evaluator they are handled in `subset_sequence_for_ran
 
 ### Subsetting (`subset_sequence_for_ranges`)
 
-Given `[start, end]`, the sequence is trimmed to only include sequence context that affects the ranges that fit into the Enformer context. This subsetting avoids making unnecessary predictions outside the context window of the model since predictions are independent from one another. 
+Ranges are 0-indexed and half-open (`[start, end)`, like Python slicing): `end` is exclusive, `start` must be strictly less than `end`, and `end` may equal the sequence length (counting any `upstream_seq` / `downstream_seq` flanks). Given `[start, end)`, the sequence is trimmed to only include sequence context that affects the ranges that fit into the Enformer context. This subsetting avoids making unnecessary predictions outside the context window of the model since predictions are independent from one another. 
 
 - **range smaller than the prediction window** → center the range in a `prediction_window`-sized window and add `SEQ_CONTEXT` (40,960 bp) flank on each side;
 - **range ≥ prediction window** → just add `SEQ_CONTEXT` flank each side.
@@ -121,12 +121,15 @@ Downstream (not centered) padding on trailing chunks keeps the first base aligne
 
 ## Model-specific validation & scaling (`model_validation.py`)
 
-`model_specific_payload_validation` runs after the generic schema passes and collects all violations into one `PredictionFailedError`:
+`model_specific_payload_validation` runs after the generic schema passes and collects the request-level violations into one `PredictionFailedError`, which fails the whole request:
 
 - **readout** `interaction_matrix` is rejected (Enformer supports `point` and `track`);
+- **scale**, if present, must be `linear` or `log` (the schema checks already reject an unrecognised `scale` as 400, so this is a backstop).
+
+Task-level limitations are checked by `unsupported_task_reason(task)`. They do not fail the request: that task is not sent to the model and is returned with `null` `*_actual` keys and a `prediction_request_failed` error object, while the other tasks are still predicted:
+
 - **species** must be `homo_sapiens` or `mus_musculus`;
-- **type** starting with `conformation_` or `expression_splicing` is rejected;
-- **scale**, if present, must be `linear` or `log`.
+- **type** starting with `conformation_` or `expression_splicing` is rejected.
 
 `apply_scaling(predictions, requested_scale)` returns `(transformed, effective_scale)`:
 - `linear` (or unset) → unchanged, `"linear"`;
