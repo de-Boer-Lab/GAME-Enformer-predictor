@@ -58,10 +58,13 @@ def predict_enformer(sequences, request_tasks, matcher_ip, matcher_port, predict
     
     Returns:
         tuple: A tuple containing:
-            - task_predictions (dict or str): On success, a dictionary of
-              prediction results. On failure, an error message string.
-            - overall_matcher_version (str): The version of the matcher
-              service used, or "N/A" if it was not called.
+            - task_predictions (dict): A dictionary of prediction results per
+              (request_type, cell_type, species) task. A task that could not be performed maps to
+              {"error": [{"<error_key>": "<message>"}]} instead of predictions:
+              "prediction_request_failed" if no matching tracks were found, or
+              "upstream_dependency_failed" if the Matcher was needed but unreachable.
+            - overall_matcher_version (str or None): The version of the matcher
+              service used, or None if it was not called.
             
             For "all_tracks" tasks, predictions are not averaged over tracks
             and the full prediction matrix is returned (shape [1, num_sliced_bins, 5313 tracks]).
@@ -88,7 +91,7 @@ def predict_enformer(sequences, request_tasks, matcher_ip, matcher_port, predict
     # Example: [1, 2, 3]
     
     # Initialize variable to hold Matcher version
-    overall_matcher_version = "N/A"
+    overall_matcher_version = None  # Stays None if the Matcher is never used
     
     # NEW: Load targets ONCE before loop
     human_targets_df, mouse_targets_df = load_targets()
@@ -114,7 +117,12 @@ def predict_enformer(sequences, request_tasks, matcher_ip, matcher_port, predict
             targets_df_to_use, request_type, cell_type, matcher_ip, matcher_port
         )
         
-        if task_matcher_version not in ["N/A", "error"]:
+        if task_matcher_version == "error":
+            # The Matcher was needed but failed or was unreachable, so no version could be obtained
+            # ("UnknownMatcher" is returned as null by the API). A version from another task wins.
+            if overall_matcher_version is None:
+                overall_matcher_version = "UnknownMatcher"
+        elif task_matcher_version is not None:
             overall_matcher_version = task_matcher_version
         
         # NEW: task_key now includes species
@@ -123,10 +131,14 @@ def predict_enformer(sequences, request_tasks, matcher_ip, matcher_port, predict
         # If filtered_tracks returns a string, it is an error message -- bail-out!
         if isinstance(filtered_tracks, str):
             # The function failed, and 'filtered_tracks' now holds the error message.
-            # Return this error message to the API to be sent to the client.
+            # Store it as an error object ({"error": [{"<error_key>": "<message>"}]}) that the API
+            # returns as this task's `predictions`.
+            # "error" as the Matcher version means the Matcher was needed but failed or was unreachable.
+            # Only this task fails (with the distinct "upstream_dependency_failed" key); other tasks are still returned.
             #return filtered_tracks, overall_matcher_version
             print(f"No matching tracks found for {request_type} and {cell_type}. Skipping...")
-            task_to_indices[task_key] = {"error": filtered_tracks}
+            error_key = "upstream_dependency_failed" if task_matcher_version == "error" else "prediction_request_failed"
+            task_to_indices[task_key] = {"error": [{error_key: filtered_tracks}]}
         else:
             # Otherwise, proceed as before -- knowing filtered_tracks is a DataFrame
             track_indices = filtered_tracks.index.tolist()
@@ -391,7 +403,8 @@ def predict_enformer(sequences, request_tasks, matcher_ip, matcher_port, predict
                 else:
                     # "track" readout: Return full 896 bin predictions
                     # Store predictions in task-specific dictionary
-                    task_predictions[task_key][seq_id] = avg_prediction.squeeze().tolist()
+                    # atleast_1d: a single-bin result must stay a 1-D list, not collapse to a bare number
+                    task_predictions[task_key][seq_id] = np.atleast_1d(avg_prediction.squeeze()).tolist()
                     #Need to add trim upstream if it exists
                     task_predictions[task_key].setdefault("trim_upstream", {})[seq_id] = trim_upstream
                     
@@ -727,13 +740,10 @@ if __name__ == "__main__":
         f"895 bins returned (correct for 114,433 bp)",
         f"Got {_sl_odd.shape[1]}")
 
-    # trim_upstream: N_in_bins = 895*128 - 114433 = 127, N_in_left = 127 // 2 = 63
-    # But the actual N in the left bin is 127 (sequence starts at position 127).
-    # The function's symmetric split (N_in_bins // 2 = 63) doesn't match the
-    # actual left N (127) for odd-length sequences, but this is a minor
-    # inaccuracy in the trim computation method, not the padding mismatch bug.
-    _ok(_tu_odd == 63,
-        f"trim_upstream = 63 (N_in_bins={895*128-114433}=127, 127//2=63)",
+    # trim_upstream: the sequence starts 127 bp into bin 0 (left_padding_after_buffer = 127),
+    # so 127 bp of the first bin are N padding upstream of the sequence.
+    _ok(_tu_odd == 127,
+        f"trim_upstream = 127 (sequence starts 127 bp into bin 0)",
         f"Got {_tu_odd}")
 
     # Verify: the OLD bug would have returned bin 1 as first (wrong).
@@ -870,6 +880,166 @@ if __name__ == "__main__":
     # Predictions get mixed into metadata dict: {track_indices, cell_type_actual, seq_id: [...]}
     _ok(True,
         "task_predictions aliases task_to_indices → predictions mixed with metadata")
+
+    # ======================================================================
+    # TEST 13: predict_enformer coordinates for half-open prediction_ranges
+    # ======================================================================
+    print("\n" + "=" * 70)
+    print("TEST 13: predict_enformer end-to-end coordinates (half-open ranges)")
+    print("=" * 70)
+    print("Fake model: every output bin's value is the coordinate, in the ORIGINAL sequence, of the bin's first base.")
+    print("prediction_ranges are 0-indexed and half-open: [start, end), end is exclusive.\n")
+    import random
+    _rng = random.Random(7)
+    _OUT0 = (SEQ_LEN - _PW) // 2      # input position of output bin 0 (139,264)
+    _state = {"orig": None, "last": None}
+    def _rseq(n):
+        return "".join(_rng.choice("ACGT") for _ in range(n))
+
+    class _CoordinateModel:
+        def predict_on_batch(self, x):
+            s = _state["last"]
+            first = len(s) - len(s.lstrip("N"))
+            probe = s[first:first + 40].split("N")[0]      # real bases only (a trailing chunk is N-padded)
+            c0 = _state["orig"].find(probe)
+            coords = (c0 + (_OUT0 + _BS * np.arange(_NBINS) - first)).astype(np.float32)[None, :, None]
+            return {"human": np.broadcast_to(coords, (1, _NBINS, 5313)).copy(),
+                    "mouse": np.broadcast_to(coords + 0.5, (1, _NBINS, 1643)).copy()}
+
+    # Swap in the fake model and a recording encoder (restored at the end of TEST 14)
+    _real_model, _real_one_hot = model, one_hot_encode
+    model = _CoordinateModel()
+    one_hot_encode = lambda s: (_state.__setitem__("last", s), np.zeros((len(s), 4), np.float32))[1]
+
+    _H = ("accessibility", "K562", "homo_sapiens")       # 4 exact ATAC/DNASE tracks, no Matcher needed
+    _mouse_df = load_targets()[1]
+    _MO = ("expression", _mouse_df[_mouse_df.Assay == "CAGE"]["Cell Type"].iloc[0], "mus_musculus")
+
+    def _range_problems(v, trim, start, end, off=0.0):
+        """Everything that must hold for a track covering [start, end) (empty list = all good)."""
+        if not isinstance(v, list):
+            return [f"result is {type(v).__name__}, not a list"]
+        problems = []
+        if not 0 <= trim < _BS:
+            problems.append(f"trim_upstream {trim} not in [0, {_BS})")
+        if v[0] - off != start - trim:
+            problems.append(f"first bin starts at {v[0] - off}, expected start - trim = {start - trim}")
+        n_exp = math.ceil((trim + end - start) / _BS)
+        if len(v) != n_exp:
+            problems.append(f"{len(v)} bins, expected ceil((trim + end - start) / 128) = {n_exp}")
+        if any(b - a != _BS for a, b in zip(v, v[1:])):
+            problems.append("bins are not contiguous")
+        if not (v[-1] - off <= end - 1 < v[-1] - off + _BS):
+            problems.append(f"last bin ({v[-1] - off}..+{_BS}) does not contain base end-1 = {end - 1}")
+        return problems
+
+    def _check_case(L, rng):
+        seq = _rseq(L)
+        _state["orig"] = seq
+        res, _ = predict_enformer({"s": seq}, {_H}, None, None, {"s": rng} if rng else {}, False)
+        start, end = rng if rng else (0, L)
+        problems = _range_problems(res[_H]["s"], res[_H]["trim_upstream"]["s"], start, end)
+        _ok(not problems, f"L={L:,}, range={rng if rng else 'none'}", "; ".join(problems))
+
+    for _L in (1, 100, 1000, _PW, _PW + 1, 2 * _PW, 2 * _PW + 1, 300_000):         # no range: whole sequence
+        _check_case(_L, None)
+    for _L, _ranges in (
+        (1000,    [[0, 1], [8, 9], [999, 1000], [0, 1000], [127, 128], [128, 129], [0, 129], [100, 900]]),
+        (50_000,  [[0, 1], [49_999, 50_000], [10_000, 30_000], [0, 50_000]]),
+        (_PW,     [[0, 1], [_PW - 1, _PW], [0, _PW]]),
+        (_PW + 1, [[0, 1], [_PW, _PW + 1], [0, _PW + 1]]),
+        (300_000, [[0, 1], [8, 9], [299_999, 300_000], [100_000, 100_001], [100_000, 100_000 + _PW - 1],
+                   [100_000, 100_000 + _PW], [100_000, 100_000 + _PW + 1], [_PW - 1, _PW + 1],
+                   [50_000, 250_000], [0, 300_000], [149_000, 151_000]]),
+    ):
+        for _r in _ranges:
+            _check_case(_L, _r)
+
+    # 13b: human and mouse tasks in one request use the correct head and identical slicing
+    _seq = _rseq(250_000)
+    _state["orig"] = _seq
+    for _r in ([], [5_000, 5_001], [100_000, 160_000]):
+        _res, _ = predict_enformer({"s": _seq}, {_H, _MO}, None, None, {"s": _r} if _r else {}, False)
+        _s, _e = _r if _r else (0, len(_seq))
+        _ph = _range_problems(_res[_H]["s"], _res[_H]["trim_upstream"]["s"], _s, _e)
+        _pm = _range_problems(_res[_MO]["s"], _res[_MO]["trim_upstream"]["s"], _s, _e, off=0.5)
+        _ok(not _ph and not _pm and _res[_H]["trim_upstream"] == _res[_MO]["trim_upstream"],
+            f"human + mouse in one request, range={_r if _r else 'none'}", "; ".join(_ph + _pm))
+
+    # 13c: several sequences, some with an empty range ([]), different lengths
+    _seqs = {"a": _rseq(1000), "b": _rseq(200_000), "c": _rseq(50), "d": _rseq(_PW + 1)}
+    _rngs = {"a": [], "b": [190_000, 200_000], "c": [0, 50], "d": []}
+    _state["orig"] = "".join(_seqs.values())         # one string holding every sequence (probes are found by offset)
+    _offsets, _o = {}, 0
+    for _k, _v in _seqs.items():
+        _offsets[_k] = _o; _o += len(_v)
+    _res, _ = predict_enformer(_seqs, {_H}, None, None, _rngs, False)
+    for _k, _v in _seqs.items():
+        _s, _e = _rngs[_k] if _rngs[_k] else (0, len(_v))
+        # coordinates come back in the concatenated frame: shift them back to the sequence's own frame
+        _shifted = [x - _offsets[_k] for x in _res[_H][_k]]
+        _p13 = _range_problems(_shifted, _res[_H]["trim_upstream"][_k], _s, _e)
+        _ok(not _p13, f"multi-sequence request: '{_k}' (L={len(_v):,}, range={_rngs[_k] if _rngs[_k] else 'none'})", "; ".join(_p13))
+
+    # 13d: point readout with a range is the mean of the same bins, as a single float
+    _seq = _rseq(5_000)
+    _state["orig"] = _seq
+    _track, _ = predict_enformer({"s": _seq}, {_H}, None, None, {"s": [130, 400]}, False)
+    _point, _ = predict_enformer({"s": _seq}, {_H}, None, None, {"s": [130, 400]}, True)
+    _ok(isinstance(_point[_H]["s"], float) and abs(_point[_H]["s"] - float(np.mean(_track[_H]["s"]))) < 1e-3,
+        "point readout with a range = mean of the range's track bins (single float)",
+        f"Got {_point[_H]['s']!r}")
+
+    # ======================================================================
+    # TEST 14: matcher_version aggregation and per-task error objects
+    # ======================================================================
+    print("\n" + "=" * 70)
+    print("TEST 14: predict_enformer matcher_version and per-task errors")
+    print("=" * 70)
+    print("filter_evaluator_request is replaced by a stub that returns each outcome by name.\n")
+    import itertools
+    _real_filter = filter_evaluator_request
+    def _fake_filter(df, request_type, cell_type, ip, port, molecule=None):
+        tracks = df[(df.Assay.isin(["ATAC", "DNASE"])) & (df["Cell Type"].str.lower() == "k562")]
+        return {"exact":              (tracks, "k562", ["ATAC", "DNASE"], None),
+                "matched":            (tracks, "k562", ["ATAC", "DNASE"], "Matcher_V"),
+                "matched_no_version": (tracks, "k562", ["ATAC", "DNASE"], "UnknownMatcher"),
+                "down":               ("Failed to connect", None, None, "error"),
+                "nomatch":            ("No tracks", None, None, "Matcher_V")}[cell_type]
+    filter_evaluator_request = _fake_filter
+
+    def _versions(cells):
+        _state["orig"] = _rseq(300)
+        res, version = predict_enformer({"s": _state["orig"]}, {("accessibility", c, "homo_sapiens") for c in cells},
+                                        None, None, {}, False)
+        return res, version
+
+    for _cells, _expect in ((["exact"], None),
+                            (["down"], "UnknownMatcher"),
+                            (["matched"], "Matcher_V"),
+                            (["down", "matched"], "Matcher_V"),
+                            (["exact", "down"], "UnknownMatcher"),
+                            (["exact", "matched_no_version"], "UnknownMatcher"),
+                            (["nomatch", "exact"], "Matcher_V"),
+                            (["down", "nomatch"], "Matcher_V")):
+        # The tasks are a set, so check every ordering of the same tasks
+        _got = {_versions(list(p))[1] for p in itertools.permutations(_cells)}
+        _ok(_got == {_expect}, f"matcher_version for {_cells} = {_expect!r}", f"Got {_got}")
+
+    _res, _ = _versions(["down", "nomatch", "exact"])
+    _ok(_res[("accessibility", "down", "homo_sapiens")]["error"] == [{"upstream_dependency_failed": "Failed to connect"}],
+        "Matcher unreachable -> {'error': [{'upstream_dependency_failed': msg}]}")
+    _ok(_res[("accessibility", "nomatch", "homo_sapiens")]["error"] == [{"prediction_request_failed": "No tracks"}],
+        "no match -> {'error': [{'prediction_request_failed': msg}]}")
+    _ok("error" not in _res[("accessibility", "exact", "homo_sapiens")] and "s" in _res[("accessibility", "exact", "homo_sapiens")],
+        "a task that did not need the Matcher is still predicted")
+
+    model = None     # no task has tracks -> the model must not be called
+    _res, _ = _versions(["down", "nomatch"])
+    _ok(all("error" in t for t in _res.values()), "every task failed -> only error objects, model not run")
+
+    # Restore the real model, encoder and track filter
+    model, one_hot_encode, filter_evaluator_request = _real_model, _real_one_hot, _real_filter
 
     # ======================================================================
     # Summary

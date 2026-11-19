@@ -5,8 +5,41 @@ from error_checking_functions import *
 SUPPORTED_SCALES = ["linear", "log"]
 DEFAULT_SCALE = "linear"
 
+def unsupported_task_reason(task):
+    """
+    Checks whether Enformer can perform a single prediction task, based on its species and type.
+
+    A task Enformer cannot perform does NOT fail the whole request: it is returned with
+    null `*_actual` keys and an error object in `predictions` (see Predictor API Schema),
+    while the other tasks are still predicted.
+
+    Args:
+        task (dict): One object of `prediction_tasks` from the Evaluator request.
+
+    Returns:
+        str or None: A message describing why the task cannot be performed, or None if it can.
+    """
+    reasons = []
+
+    # --- MODEL SPECIFIC: Ensure this Enformer Predictor only supports homo_sapiens and mus_musculus ---
+    if task.get('species', '').lower() not in ["homo_sapiens", "mus_musculus"]:
+        reasons.append(
+            f"This predictor only supports species: ['homo_sapiens', 'mus_musculus']. Received '{task.get('species')}'."
+        )
+    task_type = task.get('type', '').lower()
+    if task_type.startswith("conformation_") or task_type.startswith("expression_splicing"):
+        reasons.append(
+            f"This predictor only supports type: ['expression', 'expression_pol1', 'expression_pol2', 'expression_pol3', 'expression_mrna', 'accessibility', 'binding_[molecule]']. Received '{task.get('type')}'."
+        )
+
+    return " ".join(reasons) if reasons else None
+
 def model_specific_payload_validation(payload):
-    
+    """
+    Request-level Enformer checks. These fail the whole request (HTTP error).
+    Task-level limitations (species, type) are handled per task by `unsupported_task_reason`.
+    """
+
     errors = {'prediction_request_failed': []}
 
     readout_type = payload['readout']
@@ -16,18 +49,7 @@ def model_specific_payload_validation(payload):
         print("Enformer cannot handle 'interaction_matrix' readout type. Exiting gracefully!")
         errors['prediction_request_failed'].append("Enformer cannot process 'interaction_matrix' readout type.")
 
-    # --- MODEL SPECIFIC: Ensure this Enformer Predictor only supports homo_sapiens and mus_musculus ---
     for task in payload['prediction_tasks']:
-        if task.get('species', '').lower() not in ["homo_sapiens", "mus_musculus"]:
-            errors['prediction_request_failed'].append(
-                f"This predictor only supports species: ['homo_sapiens', 'mus_musculus']. Received '{task.get('species')}' for task '{task.get('name')}'."
-            )
-        task_type = task.get('type', '').lower()
-        if task_type.startswith("conformation_") or task_type.startswith("expression_splicing"):
-            errors['prediction_request_failed'].append(
-                f"This predictor only supports type: ['expression', 'expression_pol1', 'expression_pol2', 'expression_pol3', 'expression_mrna', 'accessibility', 'binding_[molecule]']. Received '{task.get('type')}' for task '{task.get('name')}'."
-            )
-            
         # --- MODEL-SPECIFIC: Determine the scale of the prediction requested ---
         # --- NOTE: Commented out old code. Enformer supports linear or log ---
         # For now, Enformer only supports scale_prediction_requested: "linear"
